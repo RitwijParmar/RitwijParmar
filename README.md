@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=JetBrains+Mono&weight=600&size=28&pause=1200&color=58A6FF&center=true&vCenter=true&width=850&lines=Ritwij+Aryan+Parmar;AI+Systems+Engineer;LLM+Infrastructure+%7C+Reliability+%7C+Applied+Research" alt="Typing intro" />
+  <img src="https://readme-typing-svg.herokuapp.com?font=JetBrains+Mono&weight=600&size=28&pause=1200&color=58A6FF&center=true&vCenter=true&width=850&lines=Ritwij+Aryan+Parmar;AI+Systems+Engineer;LLM+Infrastructure+%7C+Reliability+%7C+Production+Engineering" alt="Typing intro" />
 </div>
 
 <p align="center">
@@ -21,7 +21,7 @@
 
 ---
 
-## Portfolio Thesis
+## Engineering Thesis
 
 Most LLM demos fail when traffic becomes mixed, state grows, and latency budgets get strict.
 This profile focuses on systems work that makes AI behavior measurable, reproducible, and production-safe.
@@ -35,7 +35,7 @@ This profile focuses on systems work that makes AI behavior measurable, reproduc
 - **LLMate.ai**  
   Developed asynchronous backend services and CI/CD workflows to reduce latency and improve deployment consistency for LLM-enabled products.
 
-## Technical Focus
+## Core Stack (Resume-Aligned)
 
 <p>
   <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" />
@@ -66,15 +66,15 @@ This profile focuses on systems work that makes AI behavior measurable, reproduc
   <img src="https://github-readme-activity-graph.vercel.app/graph?username=RitwijParmar&bg_color=1a1b27&color=79c0ff&line=58a6ff&point=2ea043&area=true&hide_border=true" alt="Activity graph" />
 </div>
 
-## Featured Portfolio Projects
+## Featured Projects
 
 Only pinned projects are listed below, and media is pulled dynamically from each project README.
 
 <!-- START:DYNAMIC_PINNED -->
-## Featured Portfolio Projects (Pinned, Auto-updated)
+## Featured Projects (Pinned, Auto-updated)
 
 _Generated from live pinned repos + each project README media assets._
-_Last sync: 2026-04-06 22:52 UTC_
+_Last sync: 2026-04-06 22:58 UTC_
 
 ### [nervaflow-intelligence](https://github.com/RitwijParmar/nervaflow-intelligence)
 <p><img alt="Language" src="https://img.shields.io/badge/Language-Python-1f6feb" /> <img alt="Stars" src="https://img.shields.io/github/stars/RitwijParmar/nervaflow-intelligence?style=flat" /> <a href="https://github.com/RitwijParmar/nervaflow-intelligence"><img alt="Open Repo" src="https://img.shields.io/badge/Open-Repository-238636" /></a></p>

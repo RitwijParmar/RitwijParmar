@@ -15,8 +15,7 @@ import re
 from datetime import datetime, timezone
 from dataclasses import asdict, dataclass
 from pathlib import Path
-from typing import Iterable, List, Optional
-from urllib.parse import urljoin
+from typing import Iterable, List
 
 import requests
 
@@ -194,7 +193,7 @@ def _render_media_block(project: PinnedProject) -> str:
 
 def render_pinned_markdown(projects: List[PinnedProject]) -> str:
     parts = [
-        "## Featured Portfolio Projects (Pinned, Auto-updated)",
+        "## Featured Projects (Pinned, Auto-updated)",
         "",
         "_Generated from live pinned repos + each project README media assets._",
         f"_Last sync: {datetime.now(timezone.utc).strftime('%Y-%m-%d %H:%M UTC')}_",
