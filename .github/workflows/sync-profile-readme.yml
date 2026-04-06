@@ -4,11 +4,6 @@ on:
   workflow_dispatch:
   schedule:
     - cron: "35 13 * * *" # Daily at 13:35 UTC
-  push:
-    branches: [ main ]
-    paths:
-      - "scripts/sync_profile_readme.py"
-      - "README.md"
 
 permissions:
   contents: write
@@ -44,4 +39,3 @@ jobs:
           git add README.md .generated/pinned_projects.json .generated/pinned_projects.md
           git commit -m "chore(profile): sync pinned projects and media"
           git push
-

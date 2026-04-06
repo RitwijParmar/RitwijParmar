@@ -51,8 +51,9 @@ Result:
 Changes:
 
 - Added GitHub Action: `.github/workflows/sync-profile-readme.yml`.
-- Scheduled daily sync + manual dispatch + sync on relevant pushes.
+- Scheduled daily sync + manual dispatch.
 - Auto-commit of generated assets (`.generated/*`) only when content changes.
+- Removed `push` trigger to prevent timestamp-driven commit loops.
 
 Result:
 
@@ -65,4 +66,3 @@ Result:
 - Add project-level uptime/latency mini-badges when APIs expose public health metrics.
 - Add a one-click "download resume" artifact if a public canonical resume URL is set.
 - Add short GIF previews for projects that currently only expose static images.
-
