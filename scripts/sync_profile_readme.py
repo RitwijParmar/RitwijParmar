@@ -194,20 +194,32 @@ def _render_media_block(project: PinnedProject) -> str:
 
 def render_pinned_markdown(projects: List[PinnedProject]) -> str:
     parts = [
-        "## Pinned Systems (Auto-synced)",
+        "## Featured Portfolio Projects (Pinned, Auto-updated)",
         "",
-        "_This section is generated from live pinned repos and each project README media._",
+        "_Generated from live pinned repos + each project README media assets._",
         f"_Last sync: {datetime.now(timezone.utc).strftime('%Y-%m-%d %H:%M UTC')}_",
         "",
     ]
     for project in projects:
+        media_block = _render_media_block(project)
         parts.extend(
             [
                 f"### [{project.repo}]({project.url})",
-                f"- **Language:** `{project.language}`  |  **Stars:** `{project.stars}`",
-                f"- **Summary:** {project.description or 'No repository description yet.'}",
+                (
+                    f'<p>'
+                    f'<img alt="Language" src="https://img.shields.io/badge/Language-{project.language.replace(" ", "%20")}-1f6feb" /> '
+                    f'<img alt="Stars" src="https://img.shields.io/github/stars/RitwijParmar/{project.repo}?style=flat" /> '
+                    f'<a href="{project.url}"><img alt="Open Repo" src="https://img.shields.io/badge/Open-Repository-238636" /></a>'
+                    f'</p>'
+                ),
+                f"{project.description or 'No repository description yet.'}",
                 "",
-                _render_media_block(project),
+                "<details>",
+                "<summary><strong>Demo / Preview</strong></summary>",
+                "",
+                media_block,
+                "",
+                "</details>",
                 "",
             ]
         )

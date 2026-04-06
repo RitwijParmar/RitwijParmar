@@ -1,102 +1,97 @@
-# Ritwij Aryan Parmar
+<h1 align="center">Ritwij Aryan Parmar</h1>
 
-**MS in Computer Science @ University at Buffalo**  
-Building reliable AI systems where model quality and systems quality are treated as one problem.
-
-<p>
-  <a href="https://github.com/RitwijParmar"><img alt="Profile views" src="https://komarev.com/ghpvc/?username=RitwijParmar&label=Profile%20views&color=0e75b6&style=flat" /></a>
-  <a href="https://github.com/RitwijParmar?tab=followers"><img alt="Followers" src="https://img.shields.io/github/followers/RitwijParmar?label=Followers&style=flat" /></a>
+<p align="center">
+  <strong>MS in Computer Science @ University at Buffalo</strong><br/>
+  Building AI systems where model performance and system reliability are engineered together.
 </p>
 
-## Contents
+<p align="center">
+  <a href="https://github.com/RitwijParmar"><img alt="Profile views" src="https://komarev.com/ghpvc/?username=RitwijParmar&label=Profile%20views&color=0e75b6&style=flat" /></a>
+  <a href="https://github.com/RitwijParmar?tab=followers"><img alt="Followers" src="https://img.shields.io/github/followers/RitwijParmar?label=Followers&style=flat" /></a>
+  <img alt="Focus" src="https://img.shields.io/badge/Focus-LLM%20Systems%20%7C%20Reliability-1f6feb" />
+</p>
 
-- [Abstract](#abstract)
-- [Current Focus](#current-focus)
-- [Experience Snapshot](#experience-snapshot)
-- [Method](#method)
-- [Systems In Public](#systems-in-public)
-- [Notes](#notes)
-- [Connect](#connect)
+---
 
-## Abstract
+## Portfolio Overview
 
-Most LLM prototypes fail not because the model is weak, but because the system around it is unstable: poor latency discipline, weak observability, and unclear failure boundaries.  
-Current work is focused on turning promising AI ideas into measurable, production-ready systems with explicit tradeoffs.
+Most LLM demos look good in isolation and break under mixed, real-world traffic.
+Work here focuses on robust AI systems design: measurable latency behavior, clear failure boundaries, and reproducible deployment paths.
 
-## Current Focus
+## What This Profile Shows
 
-- LLM runtime engineering: scheduling, memory strategy, and inference-path optimization.
-- SRE-aware AI workflows: reliability instrumentation, runbook quality, and safe automation loops.
-- Cloud-native deployment paths: reproducible environments, CI/CD, and benchmark-driven iteration.
+- Resume-backed engineering experience in robotics + AI systems.
+- Only pinned repositories as portfolio projects.
+- Live project media (video/preview) auto-synced from each pinned project README.
 
-## Looking For
-
-- Applied AI infra / ML systems engineering roles.
-- High-ownership environments where reliability and product impact both matter.
-
-## Experience Snapshot
-
-Based on recent professional work:
+## Experience
 
 - **Distributed Robotics and Networked Embedded Sensing Lab**  
-  Architected 3D mapping and navigation pipelines for edge devices in GPS-denied conditions; maintained low drift and improved trajectory reliability in low-visibility runs.
+  Built 3D mapping/navigation pipelines for edge robotics in GPS-denied scenarios, with low-drift state estimation and reliability-focused experimentation.
 - **Tata Elxsi (Autonomous Driving)**  
-  Migrated monolithic components toward distributed, fault-tolerant services using C++/CUDA; reduced latency and improved positioning accuracy in state-estimation modules.
+  Worked on distributed, low-latency autonomous stack components using C++/CUDA and improved state-estimation accuracy in real-time conditions.
 - **LLMate.ai**  
-  Built asynchronous backend services and CI/CD workflows; improved response latency and deployment reliability for LLM-enabled product surfaces.
+  Developed asynchronous backend and CI/CD workflows that improved latency and release reliability for LLM-enabled services.
 
-## Method
+## Working Style
 
-Work is driven by a simple loop:
+1. Define the bottleneck and failure mode first.
+2. Instrument before optimization.
+3. Ship small, testable changes.
+4. Re-benchmark and document tradeoffs.
 
-1. Define a clear bottleneck and failure mode.
-2. Instrument before optimizing.
-3. Ship minimal, testable changes.
-4. Re-measure and publish tradeoffs.
+## Featured Work
 
-## Evidence Style
-
-- Claim -> metric -> artifact link.
-- Architectural choices are presented with failure modes, not just benefits.
-- Demo-first communication: videos and reproducible runs over static claims.
-
-## Systems In Public
-
-Only pinned repositories are highlighted below, with media pulled dynamically from each project README.
+Only pinned projects are listed below.
 
 <!-- START:DYNAMIC_PINNED -->
-## Pinned Systems (Auto-synced)
+## Featured Portfolio Projects (Pinned, Auto-updated)
 
-_This section is generated from live pinned repos and each project README media._
-_Last sync: 2026-04-06 22:26 UTC_
+_Generated from live pinned repos + each project README media assets._
+_Last sync: 2026-04-06 22:44 UTC_
 
 ### [nervaflow-intelligence](https://github.com/RitwijParmar/nervaflow-intelligence)
-- **Language:** `Python`  |  **Stars:** `2`
-- **Summary:** Google Cloud-native decision engine for supply operations. Uses Vertex AI Search + conversational APIs for grounded GenAI responses, BigQuery pipelines for scenario and signal aggregation, and Cloud Run services for scalable API execution. Produces evidence-linked recommendations with quantified impact across locations, routes, and SKUs.
+<p><img alt="Language" src="https://img.shields.io/badge/Language-Python-1f6feb" /> <img alt="Stars" src="https://img.shields.io/github/stars/RitwijParmar/nervaflow-intelligence?style=flat" /> <a href="https://github.com/RitwijParmar/nervaflow-intelligence"><img alt="Open Repo" src="https://img.shields.io/badge/Open-Repository-238636" /></a></p>
+Google Cloud-native decision engine for supply operations. Uses Vertex AI Search + conversational APIs for grounded GenAI responses, BigQuery pipelines for scenario and signal aggregation, and Cloud Run services for scalable API execution. Produces evidence-linked recommendations with quantified impact across locations, routes, and SKUs.
+
+<details>
+<summary><strong>Demo / Preview</strong></summary>
 
 ![nervaflow-intelligence preview](https://raw.githubusercontent.com/RitwijParmar/nervaflow-intelligence/main/docs/images/nervaflow-banner.svg)
 
+</details>
+
 ### [SRE-Nidaan](https://github.com/RitwijParmar/SRE-Nidaan)
-- **Language:** `Python`  |  **Stars:** `0`
-- **Summary:** Production-style causal incident response copilot that helps teams identify what broke first, choose safer next actions, and avoid risky interventions using grounded LLM reasoning, MCP-style tool routing, and human safety gating. Built as a Face-Body-Brain architecture with QLoRA SFT, reward modeling, and RLHF for operations-ready decisions.
+<p><img alt="Language" src="https://img.shields.io/badge/Language-Python-1f6feb" /> <img alt="Stars" src="https://img.shields.io/github/stars/RitwijParmar/SRE-Nidaan?style=flat" /> <a href="https://github.com/RitwijParmar/SRE-Nidaan"><img alt="Open Repo" src="https://img.shields.io/badge/Open-Repository-238636" /></a></p>
+Production-style causal incident response copilot that helps teams identify what broke first, choose safer next actions, and avoid risky interventions using grounded LLM reasoning, MCP-style tool routing, and human safety gating. Built as a Face-Body-Brain architecture with QLoRA SFT, reward modeling, and RLHF for operations-ready decisions.
+
+<details>
+<summary><strong>Demo / Preview</strong></summary>
 
 <video src="https://raw.githubusercontent.com/RitwijParmar/SRE-Nidaan/main/presentations/SRE_Nidaan_Demo_Recording_Voiceover_Indian.mp4" controls muted playsinline width="100%"></video>
 ![SRE-Nidaan preview](https://raw.githubusercontent.com/RitwijParmar/SRE-Nidaan/main/assets/readme/architecture_split_compute.png)
 
+</details>
+
 ### [HelixServe](https://github.com/RitwijParmar/HelixServe)
-- **Language:** `Python`  |  **Stars:** `0`
-- **Summary:** A runtime-first LLM serving engine built to show how modern inference systems actually scale. It combines paged KV-cache allocation, continuous batching, chunked prefill, prefix caching, CUDA Graph replay, and custom Triton/CUDA kernels on a single GCP L4 GPU. Fully benchmarked and demonstrated gains in throughput, TTFT, and inter-token latency.
+<p><img alt="Language" src="https://img.shields.io/badge/Language-Python-1f6feb" /> <img alt="Stars" src="https://img.shields.io/github/stars/RitwijParmar/HelixServe?style=flat" /> <a href="https://github.com/RitwijParmar/HelixServe"><img alt="Open Repo" src="https://img.shields.io/badge/Open-Repository-238636" /></a></p>
+A runtime-first LLM serving engine built to show how modern inference systems actually scale. It combines paged KV-cache allocation, continuous batching, chunked prefill, prefix caching, CUDA Graph replay, and custom Triton/CUDA kernels on a single GCP L4 GPU. Fully benchmarked and demonstrated gains in throughput, TTFT, and inter-token latency.
+
+<details>
+<summary><strong>Demo / Preview</strong></summary>
 
 <video src="https://raw.githubusercontent.com/RitwijParmar/HelixServe/main/docs/assets/demo/final/helixserve_linkedin_final.mp4" controls muted playsinline width="100%"></video>
 <video src="https://raw.githubusercontent.com/RitwijParmar/HelixServe/main/docs/assets/demo/helixserve_demo.mp4" controls muted playsinline width="100%"></video>
+
+</details>
 <!-- END:DYNAMIC_PINNED -->
 
-## Notes
+## Open To
 
-- Preference is for practical depth over hype.
-- Strong interest in roles that combine systems engineering, AI infra, and reliability.
+- Applied AI infra / ML systems roles.
+- Product-minded engineering teams where reliability and delivery speed are both first-class.
 
-## Connect
+## Contact
 
 - Email: **ritwij.aryan.parmar@gmail.com**
 - LinkedIn: [ritwij-parmar](https://www.linkedin.com/in/ritwij-parmar/)
