@@ -1,54 +1,80 @@
-<h1 align="center">Ritwij Aryan Parmar</h1>
+<div align="center">
+  <img src="https://readme-typing-svg.herokuapp.com?font=JetBrains+Mono&weight=600&size=28&pause=1200&color=58A6FF&center=true&vCenter=true&width=850&lines=Ritwij+Aryan+Parmar;AI+Systems+Engineer;LLM+Infrastructure+%7C+Reliability+%7C+Applied+Research" alt="Typing intro" />
+</div>
 
 <p align="center">
   <strong>MS in Computer Science @ University at Buffalo</strong><br/>
-  Building AI systems where model performance and system reliability are engineered together.
+  Building production-grade AI systems where model quality and system reliability are engineered together.
+</p>
+
+<p align="center">
+  <a href="mailto:ritwij.aryan.parmar@gmail.com"><img src="https://img.shields.io/badge/Email-Contact-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>
+  <a href="https://www.linkedin.com/in/ritwij-parmar/"><img src="https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
+  <a href="https://github.com/RitwijParmar"><img src="https://img.shields.io/badge/GitHub-Profile-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" /></a>
 </p>
 
 <p align="center">
   <a href="https://github.com/RitwijParmar"><img alt="Profile views" src="https://komarev.com/ghpvc/?username=RitwijParmar&label=Profile%20views&color=0e75b6&style=flat" /></a>
   <a href="https://github.com/RitwijParmar?tab=followers"><img alt="Followers" src="https://img.shields.io/github/followers/RitwijParmar?label=Followers&style=flat" /></a>
-  <img alt="Focus" src="https://img.shields.io/badge/Focus-LLM%20Systems%20%7C%20Reliability-1f6feb" />
+  <img alt="Focus" src="https://img.shields.io/badge/Focus-LLM%20Infra%20%7C%20SRE%20for%20AI-1f6feb" />
 </p>
 
 ---
 
-## Portfolio Overview
+## Portfolio Thesis
 
-Most LLM demos look good in isolation and break under mixed, real-world traffic.
-Work here focuses on robust AI systems design: measurable latency behavior, clear failure boundaries, and reproducible deployment paths.
+Most LLM demos fail when traffic becomes mixed, state grows, and latency budgets get strict.
+This profile focuses on systems work that makes AI behavior measurable, reproducible, and production-safe.
 
-## What This Profile Shows
-
-- Resume-backed engineering experience in robotics + AI systems.
-- Only pinned repositories as portfolio projects.
-- Live project media (video/preview) auto-synced from each pinned project README.
-
-## Experience
+## Resume-Backed Experience
 
 - **Distributed Robotics and Networked Embedded Sensing Lab**  
-  Built 3D mapping/navigation pipelines for edge robotics in GPS-denied scenarios, with low-drift state estimation and reliability-focused experimentation.
+  Built 3D mapping and navigation pipelines for edge robotics in GPS-denied environments, with low-drift state estimation and reliability-focused field evaluation.
 - **Tata Elxsi (Autonomous Driving)**  
-  Worked on distributed, low-latency autonomous stack components using C++/CUDA and improved state-estimation accuracy in real-time conditions.
+  Worked on distributed low-latency stack components in C++/CUDA, improving state-estimation quality and runtime fault tolerance.
 - **LLMate.ai**  
-  Developed asynchronous backend and CI/CD workflows that improved latency and release reliability for LLM-enabled services.
+  Developed asynchronous backend services and CI/CD workflows to reduce latency and improve deployment consistency for LLM-enabled products.
 
-## Working Style
+## Technical Focus
 
-1. Define the bottleneck and failure mode first.
-2. Instrument before optimization.
-3. Ship small, testable changes.
-4. Re-benchmark and document tradeoffs.
+<p>
+  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" />
+  <img src="https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge&logo=cplusplus&logoColor=white" alt="C++" />
+  <img src="https://img.shields.io/badge/CUDA-76B900?style=for-the-badge&logo=nvidia&logoColor=white" alt="CUDA" />
+  <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white" alt="PyTorch" />
+  <img src="https://img.shields.io/badge/ROS2-22314E?style=for-the-badge&logo=ros&logoColor=white" alt="ROS2" />
+  <img src="https://img.shields.io/badge/GCP-4285F4?style=for-the-badge&logo=googlecloud&logoColor=white" alt="GCP" />
+  <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker" />
+  <img src="https://img.shields.io/badge/LLM%20Serving-0A66C2?style=for-the-badge" alt="LLM Serving" />
+</p>
 
-## Featured Work
+## Engineering Method
 
-Only pinned projects are listed below.
+1. Start from explicit failure modes, not generic optimization.
+2. Add instrumentation before any tuning.
+3. Ship minimal reversible changes.
+4. Re-benchmark and publish tradeoffs.
+
+## GitHub Signals
+
+<div align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=RitwijParmar&show_icons=true&theme=tokyonight&count_private=true&include_all_commits=true" alt="GitHub stats" height="160" />
+  <img src="https://github-readme-streak-stats.herokuapp.com?user=RitwijParmar&theme=tokyonight" alt="GitHub streak" height="160" />
+</div>
+
+<div align="center">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=RitwijParmar&bg_color=1a1b27&color=79c0ff&line=58a6ff&point=2ea043&area=true&hide_border=true" alt="Activity graph" />
+</div>
+
+## Featured Portfolio Projects
+
+Only pinned projects are listed below, and media is pulled dynamically from each project README.
 
 <!-- START:DYNAMIC_PINNED -->
 ## Featured Portfolio Projects (Pinned, Auto-updated)
 
 _Generated from live pinned repos + each project README media assets._
-_Last sync: 2026-04-06 22:44 UTC_
+_Last sync: 2026-04-06 22:52 UTC_
 
 ### [nervaflow-intelligence](https://github.com/RitwijParmar/nervaflow-intelligence)
 <p><img alt="Language" src="https://img.shields.io/badge/Language-Python-1f6feb" /> <img alt="Stars" src="https://img.shields.io/github/stars/RitwijParmar/nervaflow-intelligence?style=flat" /> <a href="https://github.com/RitwijParmar/nervaflow-intelligence"><img alt="Open Repo" src="https://img.shields.io/badge/Open-Repository-238636" /></a></p>
