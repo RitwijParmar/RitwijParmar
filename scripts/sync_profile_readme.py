@@ -216,19 +216,23 @@ def build_project_records(username: str, repos: Iterable[str]) -> List[PinnedPro
     return records
 
 
-def _render_media_block(project: PinnedProject) -> str:
-    if not project.media:
-        return '<img src="https://img.shields.io/badge/Watch%20Demo-Coming%20Soon-6b7280?style=flat-square" alt="Demo Coming Soon"/>'
-
+def _primary_demo_url(project: PinnedProject) -> str | None:
     priority = {"video": 0}
     sorted_media = sorted(project.media, key=lambda item: priority.get(item.kind, 9))
     for item in sorted_media[:1]:
         if item.kind == "video":
-            return (
-                f'<a href="{item.url}">'
-                '<img src="https://img.shields.io/badge/Watch%20Demo-16a34a?style=flat-square&logo=youtube&logoColor=white" alt="Demo Video"/>'
-                "</a>"
-            )
+            return item.url
+    return None
+
+
+def _render_media_block(project: PinnedProject) -> str:
+    demo_url = _primary_demo_url(project)
+    if demo_url:
+        return (
+            f'<a href="{demo_url}">'
+            f'<img src="https://img.shields.io/badge/Watch%20Demo-16a34a?style=flat-square&logo=youtube&logoColor=white" alt="Demo {project.repo}"/>'
+            "</a>"
+        )
     return '<img src="https://img.shields.io/badge/Watch%20Demo-Coming%20Soon-6b7280?style=flat-square" alt="Demo Coming Soon"/>'
 
 
@@ -236,6 +240,7 @@ def render_pinned_markdown(projects: List[PinnedProject]) -> str:
     parts: List[str] = []
     for idx, project in enumerate(projects):
         media_block = _render_media_block(project)
+        demo_url = _primary_demo_url(project)
         summary = project.description or "No repository description yet."
         language = quote(project.language)
         lang_badge = (
@@ -246,9 +251,16 @@ def render_pinned_markdown(projects: List[PinnedProject]) -> str:
         )
         repo_button = (
             f'<a href="{project.url}">'
-            '<img src="https://img.shields.io/badge/Repository-111827?style=flat-square&logo=github&logoColor=white" alt="Repository"/>'
+            f'<img src="https://img.shields.io/badge/Repository-111827?style=flat-square&logo=github&logoColor=white" alt="Repository {project.repo}"/>'
             "</a>"
         )
+        if demo_url:
+            accessible_links = (
+                f'<p><sub><a href="{project.url}">Repository: {project.repo}</a> · '
+                f'<a href="{demo_url}">Demo: {project.repo}</a></sub></p>'
+            )
+        else:
+            accessible_links = f'<p><sub><a href="{project.url}">Repository: {project.repo}</a></sub></p>'
         parts.extend(
             [
                 "<table>",
@@ -263,6 +275,7 @@ def render_pinned_markdown(projects: List[PinnedProject]) -> str:
                 f"  {repo_button}",
                 f"  {media_block}",
                 "</p>",
+                accessible_links,
                 "</td>",
                 "</tr>",
                 "</table>",
