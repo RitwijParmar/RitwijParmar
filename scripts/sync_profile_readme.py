@@ -32,6 +32,7 @@ PROFILE_URL = f"https://github.com/{PROFILE_USER}"
 START_MARKER = "<!-- START:DYNAMIC_PINNED -->"
 END_MARKER = "<!-- END:DYNAMIC_PINNED -->"
 DESCRIPTION_MAX_CHARS = 135
+PROJECT_CARD_COLUMNS = 3
 
 
 @dataclass
@@ -230,41 +231,68 @@ def _render_media_block(project: PinnedProject) -> str:
     if demo_url:
         return (
             f'<a href="{demo_url}">'
-            f'<img src="https://img.shields.io/badge/Watch%20Demo-16a34a?style=flat-square&logo=youtube&logoColor=white" alt="Watch demo {project.repo}"/>'
+            f'<img src="https://img.shields.io/badge/Watch%20Demo-f97316?style=flat-square&logo=youtube&logoColor=white" alt="Watch demo {project.repo}"/>'
             "</a>"
         )
-    return '<img src="https://img.shields.io/badge/Watch%20Demo-Coming%20Soon-6b7280?style=flat-square" alt="Demo Coming Soon"/>'
+    return '<img src="https://img.shields.io/badge/Watch%20Demo-Coming%20Soon-64748b?style=flat-square" alt="Demo Coming Soon"/>'
+
+def _project_icon(repo: str) -> str:
+    key = repo.lower()
+    if "helix" in key:
+        return "⚡"
+    if "nerva" in key or "flow" in key:
+        return "🧭"
+    if "sre" in key or "ops" in key or "nidaan" in key:
+        return "🛡️"
+    if "robot" in key or "autonomous" in key:
+        return "🤖"
+    return "🚀"
+
+
+def _render_project_card(project: PinnedProject) -> str:
+    icon = _project_icon(project.repo)
+    media_block = _render_media_block(project)
+    summary = project.description or "No repository description yet."
+    language = quote(project.language)
+    lang_badge = (
+        f'<img src="https://img.shields.io/badge/Language-{language}-0f766e?style=flat-square" alt="Language"/>'
+    )
+    stars_badge = (
+        f'<img src="https://img.shields.io/badge/Stars-{project.stars}-334155?style=flat-square&logo=github&logoColor=white" alt="Stars"/>'
+    )
+    repo_button = (
+        f'<a href="{project.url}">'
+        f'<img src="https://img.shields.io/badge/Open%20Repository-1e3a8a?style=flat-square&logo=github&logoColor=white" alt="Open repository {project.repo}"/>'
+        "</a>"
+    )
+    return "\n".join(
+        [
+            '<td width="33%" valign="top">',
+            f'<h3>{icon} <a href="{project.url}">{project.repo}</a></h3>',
+            f"<sub>{summary}</sub><br/><br/>",
+            f"{lang_badge} {stars_badge}<br/><br/>",
+            f"{repo_button}<br/>",
+            media_block,
+            "</td>",
+        ]
+    )
 
 
 def render_pinned_markdown(projects: List[PinnedProject]) -> str:
+    if not projects:
+        return "_No pinned projects found._\n"
+
     parts: List[str] = []
-    for idx, project in enumerate(projects):
-        media_block = _render_media_block(project)
-        summary = project.description or "No repository description yet."
-        language = quote(project.language)
-        lang_badge = (
-            f'<img src="https://img.shields.io/badge/Language-{language}-1f6feb?style=flat-square" alt="Language"/>'
-        )
-        stars_badge = (
-            f'<img src="https://img.shields.io/badge/Stars-{project.stars}-64748b?style=flat-square&logo=github&logoColor=white" alt="Stars"/>'
-        )
-        repo_button = (
-            f'<a href="{project.url}">'
-            f'<img src="https://img.shields.io/badge/Open%20Repository-1e293b?style=flat-square&logo=github&logoColor=white" alt="Open repository {project.repo}"/>'
-            "</a>"
-        )
-        parts.extend(
-            [
-                f"### ◈ [{project.repo}]({project.url})",
-                f"<sub>{summary}</sub>",
-                "",
-                f"{lang_badge} {stars_badge}",
-                "",
-                f"{repo_button} {media_block}",
-            ]
-        )
-        if idx != len(projects) - 1:
-            parts.extend(["", "---", ""])
+    for offset in range(0, len(projects), PROJECT_CARD_COLUMNS):
+        chunk = projects[offset : offset + PROJECT_CARD_COLUMNS]
+        parts.extend(["<table>", "<tr>"])
+        for project in chunk:
+            parts.append(_render_project_card(project))
+        for _ in range(PROJECT_CARD_COLUMNS - len(chunk)):
+            parts.append('<td width="33%" valign="top"></td>')
+        parts.extend(["</tr>", "</table>"])
+        if offset + PROJECT_CARD_COLUMNS < len(projects):
+            parts.append("")
 
     return "\n".join(parts).rstrip() + "\n"
 
