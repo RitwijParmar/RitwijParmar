@@ -14,7 +14,7 @@
 
 | Inference Behavior | Production AI Delivery | Autonomous Systems |
 |---|---|---|
-| Request scheduling, context reuse, and response consistency under real workload pressure | API reliability, observability, testing, CI/CD, and benchmark-driven iteration | Navigation, state estimation, and edge deployment in GPS-denied environments |
+| Efficient request handling, context management, and consistent response quality across varied workloads | API reliability, observability, testing, CI/CD, and benchmark-driven iteration | Navigation, state estimation, and edge deployment in GPS-denied environments |
 
 ## 🧠 Experience Highlights
 
