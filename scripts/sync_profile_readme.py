@@ -228,19 +228,22 @@ def _render_media_block(project: PinnedProject) -> str:
 
 
 def render_pinned_markdown(projects: List[PinnedProject]) -> str:
-    parts: List[str] = [
-        "| Project | Summary | Stack | Demo |",
-        "|---|---|---|---|",
-    ]
-    for project in projects:
+    parts: List[str] = []
+    for idx, project in enumerate(projects):
         media_block = _render_media_block(project)
         summary = project.description or "No repository description yet."
-        stack = f"`{project.language}` · ⭐ `{project.stars}`"
         parts.extend(
             [
-                f"| [{project.repo}]({project.url}) | {summary} | {stack} | {media_block} |",
+                f"### [{project.repo}]({project.url})",
+                summary,
+                f"`{project.language}` · ⭐ `{project.stars}`",
+                f"[Repository]({project.url}) · {media_block.replace('**Demo:** ', '')}",
             ]
         )
+        if idx != len(projects) - 1:
+            parts.append("")
+            parts.append("---")
+            parts.append("")
     return "\n".join(parts).rstrip() + "\n"
 
 
