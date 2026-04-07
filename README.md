@@ -56,7 +56,7 @@
 <td width="33%" valign="top">
 
 ### 🧠 Inference Behavior
-Stable and consistent AI behavior across varied workloads.
+Efficient request flow and consistent AI behavior in production.
 
 </td>
 <td width="33%" valign="top">
