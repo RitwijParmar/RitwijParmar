@@ -120,58 +120,40 @@ def _extract_media_links(readme_text: str, username: str, repo: str, branch: str
         seen.add(url)
         media.append(ProjectMedia(kind=kind, url=url, source=source))
 
-    # 1) Markdown links with obvious media extension.
+    # 1) Markdown links with video extensions.
     for match in re.findall(r"\[[^\]]*\]\(([^)]+)\)", readme_text):
         normalized = _normalize_link(match, username, repo, branch)
         lower = normalized.lower()
-        if any(lower.endswith(ext) for ext in (".mp4", ".webm", ".mov", ".gif")):
-            add("video" if lower.endswith((".mp4", ".webm", ".mov")) else "gif", normalized, "markdown_link")
+        if lower.endswith((".mp4", ".webm", ".mov")):
+            add("video", normalized, "markdown_link")
 
-    # 2) Image embeds with gif.
-    for match in re.findall(r"!\[[^\]]*\]\(([^)]+)\)", readme_text):
-        normalized = _normalize_link(match, username, repo, branch)
-        lower = normalized.lower()
-        if lower.endswith(".gif"):
-            add("gif", normalized, "image_embed")
-
-    # 3) HTML video tags.
+    # 2) HTML video tags.
     for match in re.findall(r"<video[^>]*src=[\"']([^\"']+)", readme_text, flags=re.IGNORECASE):
         normalized = _normalize_link(match, username, repo, branch)
         add("video", normalized, "html_video")
 
-    # 4) GitHub user-attachment assets often host demo videos.
+    # 3) GitHub user-attachment assets often host demo videos.
     for match in re.findall(r"https://github.com/user-attachments/assets/[A-Za-z0-9\-]+", readme_text):
         add("video", match, "user_attachment")
-
-    # 5) Fallback: demo-like links with no extension but containing demo/video keywords.
-    for match in re.findall(r"\[[^\]]*(?:demo|video)[^\]]*\]\(([^)]+)\)", readme_text, flags=re.IGNORECASE):
-        normalized = _normalize_link(match, username, repo, branch)
-        add("demo_link", normalized, "demo_keyword_link")
-
-    # 6) Demo-like image assets for poster/fallback rendering.
-    for match in re.findall(r"!\[[^\]]*(?:demo|thumbnail|architecture|screenshot)[^\]]*\]\(([^)]+)\)", readme_text, flags=re.IGNORECASE):
-        normalized = _normalize_link(match, username, repo, branch)
-        if normalized.lower().endswith((".png", ".jpg", ".jpeg", ".svg", ".webp")):
-            add("image", normalized, "demo_image_embed")
-
-    # 7) General fallback: first README image if no media found yet.
-    if not media:
-        for match in re.findall(r"!\[[^\]]*\]\(([^)]+)\)", readme_text):
-            normalized = _normalize_link(match, username, repo, branch)
-            if normalized.lower().endswith((".png", ".jpg", ".jpeg", ".svg", ".webp", ".gif")):
-                fallback_kind = "gif" if normalized.lower().endswith(".gif") else "image"
-                add(fallback_kind, normalized, "fallback_first_image")
-                break
 
     return media
 
 
 def fetch_readme(username: str, repo: str) -> tuple[str, str]:
     for branch in ("main", "master"):
-        url = f"https://raw.githubusercontent.com/{username}/{repo}/{branch}/README.md"
-        response = requests.get(url, timeout=30)
-        if response.status_code == 200:
-            return branch, response.text
+        # Resolve branch -> commit SHA first to avoid stale CDN reads on branch aliases.
+        commit_api = f"https://api.github.com/repos/{username}/{repo}/commits/{branch}"
+        commit_res = requests.get(commit_api, timeout=30)
+        if commit_res.status_code != 200:
+            continue
+        sha = commit_res.json().get("sha")
+        if not sha:
+            continue
+
+        raw_url = f"https://raw.githubusercontent.com/{username}/{repo}/{sha}/README.md"
+        readme_res = requests.get(raw_url, timeout=30)
+        if readme_res.status_code == 200:
+            return branch, readme_res.text
     return "main", ""
 
 
@@ -197,22 +179,16 @@ def build_project_records(username: str, repos: Iterable[str]) -> List[PinnedPro
 
 def _render_media_block(project: PinnedProject) -> str:
     if not project.media:
-        return "_No demo media detected in README yet._"
+        return "_Demo video not linked in project README yet._"
 
     lines = []
-    priority = {"video": 0, "gif": 1, "image": 2, "demo_link": 3}
+    priority = {"video": 0}
     sorted_media = sorted(project.media, key=lambda item: priority.get(item.kind, 9))
     for item in sorted_media[:1]:
         if item.kind == "video":
             lines.append(
                 f'<video src="{item.url}" controls muted playsinline width="100%"></video>'
             )
-        elif item.kind == "image":
-            lines.append(f"![{project.repo} preview]({item.url})")
-        elif item.kind == "gif":
-            lines.append(f"![{project.repo} demo]({item.url})")
-        else:
-            lines.append(f"[Demo link]({item.url})")
     return "\n".join(lines)
 
 

@@ -28,7 +28,7 @@ Auto-synced from pinned repositories and each project README media.
 Google Cloud-native decision engine for supply operations
 `Python` | ⭐ `2` | [Repository](https://github.com/RitwijParmar/nervaflow-intelligence)
 
-![nervaflow-intelligence preview](https://raw.githubusercontent.com/RitwijParmar/nervaflow-intelligence/main/docs/images/nervaflow-banner.svg)
+<video src="https://raw.githubusercontent.com/RitwijParmar/nervaflow-intelligence/main/artifacts/video/nervaflow_demo_linkedin_1080p.mp4" controls muted playsinline width="100%"></video>
 
 ### [SRE-Nidaan](https://github.com/RitwijParmar/SRE-Nidaan)
 Production-style causal incident response copilot that helps teams identify what broke first, choose safer next actions

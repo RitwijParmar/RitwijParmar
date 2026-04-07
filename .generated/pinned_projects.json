@@ -15,9 +15,9 @@
       "readme_branch": "main",
       "media": [
         {
-          "kind": "image",
-          "url": "https://raw.githubusercontent.com/RitwijParmar/nervaflow-intelligence/main/docs/images/nervaflow-banner.svg",
-          "source": "fallback_first_image"
+          "kind": "video",
+          "url": "https://raw.githubusercontent.com/RitwijParmar/nervaflow-intelligence/main/artifacts/video/nervaflow_demo_linkedin_1080p.mp4",
+          "source": "html_video"
         }
       ]
     },
