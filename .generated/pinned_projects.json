@@ -9,7 +9,7 @@
     {
       "repo": "nervaflow-intelligence",
       "url": "https://github.com/RitwijParmar/nervaflow-intelligence",
-      "description": "Google Cloud-native decision engine for supply operations. Uses Vertex AI Search + conversational APIs for grounded GenAI responses, BigQuery pipelines for scenario and signal aggregation, and Cloud Run services for scalable API execution. Produces evidence-linked recommendations with quantified impact across locations, routes, and SKUs.",
+      "description": "Google Cloud-native decision engine for supply operations",
       "language": "Python",
       "stars": 2,
       "readme_branch": "main",
@@ -24,7 +24,7 @@
     {
       "repo": "SRE-Nidaan",
       "url": "https://github.com/RitwijParmar/SRE-Nidaan",
-      "description": "Production-style causal incident response copilot that helps teams identify what broke first, choose safer next actions, and avoid risky interventions using grounded LLM reasoning, MCP-style tool routing, and human safety gating. Built as a Face-Body-Brain architecture with QLoRA SFT, reward modeling, and RLHF for operations-ready decisions.",
+      "description": "Production-style causal incident response copilot that helps teams identify what broke first, choose safer next actions",
       "language": "Python",
       "stars": 0,
       "readme_branch": "main",
@@ -33,23 +33,13 @@
           "kind": "video",
           "url": "https://raw.githubusercontent.com/RitwijParmar/SRE-Nidaan/main/presentations/SRE_Nidaan_Demo_Recording_Voiceover_Indian.mp4",
           "source": "markdown_link"
-        },
-        {
-          "kind": "demo_link",
-          "url": "https://raw.githubusercontent.com/RitwijParmar/SRE-Nidaan/main/presentations/SRE_Nidaan_LinkedIn_Thumbnail.png",
-          "source": "demo_keyword_link"
-        },
-        {
-          "kind": "image",
-          "url": "https://raw.githubusercontent.com/RitwijParmar/SRE-Nidaan/main/assets/readme/architecture_split_compute.png",
-          "source": "demo_image_embed"
         }
       ]
     },
     {
       "repo": "HelixServe",
       "url": "https://github.com/RitwijParmar/HelixServe",
-      "description": "A runtime-first LLM serving engine built to show how modern inference systems actually scale. It combines paged KV-cache allocation, continuous batching, chunked prefill, prefix caching, CUDA Graph replay, and custom Triton/CUDA kernels on a single GCP L4 GPU. Fully benchmarked and demonstrated gains in throughput, TTFT, and inter-token latency.",
+      "description": "A runtime-first LLM serving engine built to show how modern inference systems actually scale",
       "language": "Python",
       "stars": 0,
       "readme_branch": "main",
@@ -58,21 +48,6 @@
           "kind": "video",
           "url": "https://raw.githubusercontent.com/RitwijParmar/HelixServe/main/docs/assets/demo/final/helixserve_linkedin_final.mp4",
           "source": "markdown_link"
-        },
-        {
-          "kind": "video",
-          "url": "https://raw.githubusercontent.com/RitwijParmar/HelixServe/main/docs/assets/demo/helixserve_demo.mp4",
-          "source": "markdown_link"
-        },
-        {
-          "kind": "gif",
-          "url": "https://raw.githubusercontent.com/RitwijParmar/HelixServe/main/docs/assets/demo/helixserve_demo.gif",
-          "source": "markdown_link"
-        },
-        {
-          "kind": "demo_link",
-          "url": "https://raw.githubusercontent.com/RitwijParmar/HelixServe/main/docs/assets/demo/final/timeline.json",
-          "source": "demo_keyword_link"
         }
       ]
     }

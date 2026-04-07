@@ -12,7 +12,6 @@ from __future__ import annotations
 
 import json
 import re
-from datetime import datetime, timezone
 from dataclasses import asdict, dataclass
 from pathlib import Path
 from typing import Iterable, List
@@ -31,6 +30,7 @@ PROFILE_URL = f"https://github.com/{PROFILE_USER}"
 
 START_MARKER = "<!-- START:DYNAMIC_PINNED -->"
 END_MARKER = "<!-- END:DYNAMIC_PINNED -->"
+DESCRIPTION_MAX_CHARS = 135
 
 
 @dataclass
@@ -83,6 +83,31 @@ def _normalize_link(link: str, username: str, repo: str, branch: str) -> str:
     # Treat as repository-relative path.
     clean = link.lstrip("./")
     return f"https://raw.githubusercontent.com/{username}/{repo}/{branch}/{clean}"
+
+
+def _compact_description(text: str, max_chars: int = 220) -> str:
+    clean = " ".join((text or "").split()).strip()
+    if not clean:
+        return ""
+
+    # Prefer a natural short clause over hard truncation.
+    for sep in (". ", "; ", ", and ", ", "):
+        if sep in clean:
+            candidate = clean.split(sep, 1)[0].strip().rstrip(" .,;")
+            if 30 <= len(candidate) <= max_chars:
+                return candidate
+
+    sentences = re.split(r"(?<=[.!?])\s+", clean)
+    if sentences:
+        first_sentence = sentences[0].strip()
+        if 30 <= len(first_sentence) <= max_chars:
+            return first_sentence.rstrip(" .,;")
+
+    if len(clean) <= max_chars:
+        return clean.rstrip(" .,;")
+
+    trimmed = clean[:max_chars].rsplit(" ", 1)[0].rstrip(" ,;:-")
+    return trimmed + "..."
 
 
 def _extract_media_links(readme_text: str, username: str, repo: str, branch: str) -> List[ProjectMedia]:
@@ -160,11 +185,11 @@ def build_project_records(username: str, repos: Iterable[str]) -> List[PinnedPro
             PinnedProject(
                 repo=repo,
                 url=f"https://github.com/{username}/{repo}",
-                description=(meta.get("description") or "").strip(),
+                description=_compact_description((meta.get("description") or "").strip(), DESCRIPTION_MAX_CHARS),
                 language=meta.get("language") or "N/A",
                 stars=int(meta.get("stargazers_count") or 0),
                 readme_branch=branch,
-                media=media[:4],  # keep section compact
+                media=media[:1],  # keep profile concise
             )
         )
     return records
@@ -177,7 +202,7 @@ def _render_media_block(project: PinnedProject) -> str:
     lines = []
     priority = {"video": 0, "gif": 1, "image": 2, "demo_link": 3}
     sorted_media = sorted(project.media, key=lambda item: priority.get(item.kind, 9))
-    for item in sorted_media[:2]:
+    for item in sorted_media[:1]:
         if item.kind == "video":
             lines.append(
                 f'<video src="{item.url}" controls muted playsinline width="100%"></video>'
@@ -192,33 +217,16 @@ def _render_media_block(project: PinnedProject) -> str:
 
 
 def render_pinned_markdown(projects: List[PinnedProject]) -> str:
-    parts = [
-        "## Featured Projects (Pinned, Auto-updated)",
-        "",
-        "_Generated from live pinned repos + each project README media assets._",
-        f"_Last sync: {datetime.now(timezone.utc).strftime('%Y-%m-%d %H:%M UTC')}_",
-        "",
-    ]
+    parts: List[str] = []
     for project in projects:
         media_block = _render_media_block(project)
         parts.extend(
             [
                 f"### [{project.repo}]({project.url})",
-                (
-                    f'<p>'
-                    f'<img alt="Language" src="https://img.shields.io/badge/Language-{project.language.replace(" ", "%20")}-1f6feb" /> '
-                    f'<img alt="Stars" src="https://img.shields.io/github/stars/RitwijParmar/{project.repo}?style=flat" /> '
-                    f'<a href="{project.url}"><img alt="Open Repo" src="https://img.shields.io/badge/Open-Repository-238636" /></a>'
-                    f'</p>'
-                ),
                 f"{project.description or 'No repository description yet.'}",
-                "",
-                "<details>",
-                "<summary><strong>Demo / Preview</strong></summary>",
+                f"`{project.language}` | ⭐ `{project.stars}` | [Repository]({project.url})",
                 "",
                 media_block,
-                "",
-                "</details>",
                 "",
             ]
         )
@@ -238,7 +246,7 @@ def inject_section(readme_text: str, section: str) -> str:
 
 def main() -> None:
     GENERATED_DIR.mkdir(parents=True, exist_ok=True)
-    pinned = get_pinned_repos(PROFILE_USER)
+    pinned = get_pinned_repos(PROFILE_USER)[:3]
     projects = build_project_records(PROFILE_USER, pinned)
 
     data = {
