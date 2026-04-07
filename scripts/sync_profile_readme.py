@@ -230,7 +230,7 @@ def _render_media_block(project: PinnedProject) -> str:
     if demo_url:
         return (
             f'<a href="{demo_url}">'
-            f'<img src="https://img.shields.io/badge/Watch%20Demo-16a34a?style=flat-square&logo=youtube&logoColor=white" alt="Demo {project.repo}"/>'
+            f'<img src="https://img.shields.io/badge/Watch%20Demo-16a34a?style=flat-square&logo=youtube&logoColor=white" alt="Watch demo {project.repo}"/>'
             "</a>"
         )
     return '<img src="https://img.shields.io/badge/Watch%20Demo-Coming%20Soon-6b7280?style=flat-square" alt="Demo Coming Soon"/>'
@@ -246,35 +246,25 @@ def render_pinned_markdown(projects: List[PinnedProject]) -> str:
             f'<img src="https://img.shields.io/badge/Language-{language}-1f6feb?style=flat-square" alt="Language"/>'
         )
         stars_badge = (
-            f'<img src="https://img.shields.io/badge/Stars-{project.stars}-f59e0b?style=flat-square&logo=github&logoColor=white" alt="Stars"/>'
+            f'<img src="https://img.shields.io/badge/Stars-{project.stars}-64748b?style=flat-square&logo=github&logoColor=white" alt="Stars"/>'
         )
         repo_button = (
             f'<a href="{project.url}">'
-            f'<img src="https://img.shields.io/badge/Repository-111827?style=flat-square&logo=github&logoColor=white" alt="Repository {project.repo}"/>'
+            f'<img src="https://img.shields.io/badge/Open%20Repository-1e293b?style=flat-square&logo=github&logoColor=white" alt="Open repository {project.repo}"/>'
             "</a>"
         )
         parts.extend(
             [
-                "<table>",
-                "<tr>",
-                '<td width="100%">',
-                f'<h3>◈ <a href="{project.url}">{project.repo}</a></h3>',
-                f"<p>{summary}</p>",
-                "<p>",
-                f"  {lang_badge} {stars_badge}",
-                "</p>",
-                "<p>",
-                f"  {repo_button}",
-                f"  {media_block}",
-                "</p>",
-                "</td>",
-                "</tr>",
-                "</table>",
+                f"### ◈ [{project.repo}]({project.url})",
+                f"<sub>{summary}</sub>",
+                "",
+                f"{lang_badge} {stars_badge}",
+                "",
+                f"{repo_button} {media_block}",
             ]
         )
         if idx != len(projects) - 1:
-            parts.append("<br/>")
-            parts.append("")
+            parts.extend(["", "---", ""])
 
     return "\n".join(parts).rstrip() + "\n"
 

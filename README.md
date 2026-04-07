@@ -8,64 +8,43 @@
     <a href="https://mail.google.com/mail/?view=cm&fs=1&to=ritwij.aryan.parmar@gmail.com"><img src="https://img.shields.io/badge/Gmail-D14836?style=flat-square&logo=gmail&logoColor=white" alt="Gmail"/></a>
     <a href="https://github.com/RitwijParmar"><img src="https://img.shields.io/badge/GitHub-111827?style=flat-square&logo=github&logoColor=white" alt="GitHub"/></a>
   </p>
+  <p>
+    <img src="https://img.shields.io/badge/Now-Building%20LLM%20Runtime%20Systems-1e40af?style=flat-square" alt="Now building"/>
+    <img src="https://img.shields.io/badge/Open%20To-AI%20Systems%20Roles-0f766e?style=flat-square" alt="Open to roles"/>
+  </p>
 </div>
 
 <p align="center"><em>Currently building LLM runtime systems, production AI backends, and autonomous software.</em></p>
 
 ## 🚀 Featured Projects
 
-Auto-synced project cards with direct repository and demo links.
+Top work with direct repository and demo links.
 
 <!-- START:DYNAMIC_PINNED -->
-<table>
-<tr>
-<td width="100%">
-<h3>◈ <a href="https://github.com/RitwijParmar/nervaflow-intelligence">nervaflow-intelligence</a></h3>
-<p>Google Cloud-native decision engine for supply operations</p>
-<p>
-  <img src="https://img.shields.io/badge/Language-Python-1f6feb?style=flat-square" alt="Language"/> <img src="https://img.shields.io/badge/Stars-2-f59e0b?style=flat-square&logo=github&logoColor=white" alt="Stars"/>
-</p>
-<p>
-  <a href="https://github.com/RitwijParmar/nervaflow-intelligence"><img src="https://img.shields.io/badge/Repository-111827?style=flat-square&logo=github&logoColor=white" alt="Repository nervaflow-intelligence"/></a>
-  <a href="https://raw.githubusercontent.com/RitwijParmar/nervaflow-intelligence/main/artifacts/video/nervaflow_demo_linkedin_1080p.mp4"><img src="https://img.shields.io/badge/Watch%20Demo-16a34a?style=flat-square&logo=youtube&logoColor=white" alt="Demo nervaflow-intelligence"/></a>
-</p>
-</td>
-</tr>
-</table>
-<br/>
+### ◈ [nervaflow-intelligence](https://github.com/RitwijParmar/nervaflow-intelligence)
+<sub>Google Cloud-native decision engine for supply operations</sub>
 
-<table>
-<tr>
-<td width="100%">
-<h3>◈ <a href="https://github.com/RitwijParmar/HelixServe">HelixServe</a></h3>
-<p>A runtime-first LLM serving engine built to show how modern inference systems actually scale</p>
-<p>
-  <img src="https://img.shields.io/badge/Language-Python-1f6feb?style=flat-square" alt="Language"/> <img src="https://img.shields.io/badge/Stars-0-f59e0b?style=flat-square&logo=github&logoColor=white" alt="Stars"/>
-</p>
-<p>
-  <a href="https://github.com/RitwijParmar/HelixServe"><img src="https://img.shields.io/badge/Repository-111827?style=flat-square&logo=github&logoColor=white" alt="Repository HelixServe"/></a>
-  <a href="https://raw.githubusercontent.com/RitwijParmar/HelixServe/main/docs/assets/demo/final/helixserve_linkedin_final.mp4"><img src="https://img.shields.io/badge/Watch%20Demo-16a34a?style=flat-square&logo=youtube&logoColor=white" alt="Demo HelixServe"/></a>
-</p>
-</td>
-</tr>
-</table>
-<br/>
+<img src="https://img.shields.io/badge/Language-Python-1f6feb?style=flat-square" alt="Language"/> <img src="https://img.shields.io/badge/Stars-2-64748b?style=flat-square&logo=github&logoColor=white" alt="Stars"/>
 
-<table>
-<tr>
-<td width="100%">
-<h3>◈ <a href="https://github.com/RitwijParmar/SRE-Nidaan">SRE-Nidaan</a></h3>
-<p>Production-style causal incident response copilot that helps teams identify what broke first, choose safer next actions</p>
-<p>
-  <img src="https://img.shields.io/badge/Language-Python-1f6feb?style=flat-square" alt="Language"/> <img src="https://img.shields.io/badge/Stars-0-f59e0b?style=flat-square&logo=github&logoColor=white" alt="Stars"/>
-</p>
-<p>
-  <a href="https://github.com/RitwijParmar/SRE-Nidaan"><img src="https://img.shields.io/badge/Repository-111827?style=flat-square&logo=github&logoColor=white" alt="Repository SRE-Nidaan"/></a>
-  <a href="https://raw.githubusercontent.com/RitwijParmar/SRE-Nidaan/main/presentations/SRE_Nidaan_Demo_Recording_Voiceover_Indian.mp4"><img src="https://img.shields.io/badge/Watch%20Demo-16a34a?style=flat-square&logo=youtube&logoColor=white" alt="Demo SRE-Nidaan"/></a>
-</p>
-</td>
-</tr>
-</table>
+<a href="https://github.com/RitwijParmar/nervaflow-intelligence"><img src="https://img.shields.io/badge/Open%20Repository-1e293b?style=flat-square&logo=github&logoColor=white" alt="Open repository nervaflow-intelligence"/></a> <a href="https://raw.githubusercontent.com/RitwijParmar/nervaflow-intelligence/main/artifacts/video/nervaflow_demo_linkedin_1080p.mp4"><img src="https://img.shields.io/badge/Watch%20Demo-16a34a?style=flat-square&logo=youtube&logoColor=white" alt="Watch demo nervaflow-intelligence"/></a>
+
+---
+
+### ◈ [HelixServe](https://github.com/RitwijParmar/HelixServe)
+<sub>A runtime-first LLM serving engine built to show how modern inference systems actually scale</sub>
+
+<img src="https://img.shields.io/badge/Language-Python-1f6feb?style=flat-square" alt="Language"/> <img src="https://img.shields.io/badge/Stars-0-64748b?style=flat-square&logo=github&logoColor=white" alt="Stars"/>
+
+<a href="https://github.com/RitwijParmar/HelixServe"><img src="https://img.shields.io/badge/Open%20Repository-1e293b?style=flat-square&logo=github&logoColor=white" alt="Open repository HelixServe"/></a> <a href="https://raw.githubusercontent.com/RitwijParmar/HelixServe/main/docs/assets/demo/final/helixserve_linkedin_final.mp4"><img src="https://img.shields.io/badge/Watch%20Demo-16a34a?style=flat-square&logo=youtube&logoColor=white" alt="Watch demo HelixServe"/></a>
+
+---
+
+### ◈ [SRE-Nidaan](https://github.com/RitwijParmar/SRE-Nidaan)
+<sub>Production-style causal incident response copilot that helps teams identify what broke first, choose safer next actions</sub>
+
+<img src="https://img.shields.io/badge/Language-Python-1f6feb?style=flat-square" alt="Language"/> <img src="https://img.shields.io/badge/Stars-0-64748b?style=flat-square&logo=github&logoColor=white" alt="Stars"/>
+
+<a href="https://github.com/RitwijParmar/SRE-Nidaan"><img src="https://img.shields.io/badge/Open%20Repository-1e293b?style=flat-square&logo=github&logoColor=white" alt="Open repository SRE-Nidaan"/></a> <a href="https://raw.githubusercontent.com/RitwijParmar/SRE-Nidaan/main/presentations/SRE_Nidaan_Demo_Recording_Voiceover_Indian.mp4"><img src="https://img.shields.io/badge/Watch%20Demo-16a34a?style=flat-square&logo=youtube&logoColor=white" alt="Watch demo SRE-Nidaan"/></a>
 <!-- END:DYNAMIC_PINNED -->
 
 ## ⚡ Focus Areas
