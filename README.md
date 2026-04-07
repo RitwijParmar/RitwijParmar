@@ -12,9 +12,9 @@
 
 ## ⚡ Focus Areas
 
-| LLM Runtime Systems | GPU Optimization | Robotics + Reliability |
+| Inference Behavior | Production AI Delivery | Autonomous Systems |
 |---|---|---|
-| Paged KV-cache, continuous batching, chunked prefill, and decode-path scheduling | CUDA Graph replay, Triton kernels, and profiler-led latency tuning (Nsight workflow) | GPS-denied robotics pipelines plus production-ready API, CI/CD, and observability practices |
+| Request scheduling, context reuse, and response consistency under real workload pressure | API reliability, observability, testing, CI/CD, and benchmark-driven iteration | Navigation, state estimation, and edge deployment in GPS-denied environments |
 
 ## 🧠 Experience Highlights
 
@@ -37,9 +37,9 @@
   <img src="https://img.shields.io/badge/SQL-336791?style=for-the-badge&logo=postgresql&logoColor=white" alt="SQL"/>
 </p>
 
-## 🚀 Featured Projects (Pinned)
+## 🚀 Featured Projects
 
-Auto-synced from pinned repositories with direct repository and demo links.
+Auto-synced project cards with direct repository and demo links.
 
 <!-- START:DYNAMIC_PINNED -->
 <table>
