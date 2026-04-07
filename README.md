@@ -2,6 +2,7 @@
 
 <div align="center">
   <p><strong>MS in Computer Science @ University at Buffalo</strong></p>
+  <p><a href="https://github.com/RitwijParmar">github.com/RitwijParmar</a></p>
   <p>Building practical AI systems that stay stable under real workload pressure.</p>
   <p>
     <a href="https://www.linkedin.com/in/ritwij-aryan-parmar-716024211/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
