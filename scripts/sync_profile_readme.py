@@ -15,6 +15,7 @@ import re
 from dataclasses import asdict, dataclass
 from pathlib import Path
 from typing import Iterable, List
+from urllib.parse import quote
 
 import requests
 
@@ -217,14 +218,14 @@ def build_project_records(username: str, repos: Iterable[str]) -> List[PinnedPro
 
 def _render_media_block(project: PinnedProject) -> str:
     if not project.media:
-        return "_Demo video not available yet._"
+        return "🎬 Demo video coming soon"
 
     priority = {"video": 0}
     sorted_media = sorted(project.media, key=lambda item: priority.get(item.kind, 9))
     for item in sorted_media[:1]:
         if item.kind == "video":
-            return f"**Demo:** [Watch video]({item.url})"
-    return "_Demo video not available yet._"
+            return f"🎬 [Watch video]({item.url})"
+    return "🎬 Demo video coming soon"
 
 
 def render_pinned_markdown(projects: List[PinnedProject]) -> str:
@@ -232,12 +233,19 @@ def render_pinned_markdown(projects: List[PinnedProject]) -> str:
     for idx, project in enumerate(projects):
         media_block = _render_media_block(project)
         summary = project.description or "No repository description yet."
+        language = quote(project.language)
+        lang_badge = (
+            f"![Language](https://img.shields.io/badge/Language-{language}-1f6feb?style=flat-square)"
+        )
+        stars_badge = (
+            f"![Stars](https://img.shields.io/badge/Stars-{project.stars}-f39c12?style=flat-square&logo=github&logoColor=white)"
+        )
         parts.extend(
             [
-                f"### [{project.repo}]({project.url})",
+                f"### 🚀 [{project.repo}]({project.url})",
                 summary,
-                f"`{project.language}` · ⭐ `{project.stars}`",
-                f"[Repository]({project.url}) · {media_block.replace('**Demo:** ', '')}",
+                f"{lang_badge} {stars_badge}",
+                f"🔗 [Repository]({project.url}) · {media_block}",
             ]
         )
         if idx != len(projects) - 1:

@@ -2,8 +2,8 @@
   "profile": "https://github.com/RitwijParmar",
   "pinned_repos": [
     "nervaflow-intelligence",
-    "SRE-Nidaan",
-    "HelixServe"
+    "HelixServe",
+    "SRE-Nidaan"
   ],
   "projects": [
     {
@@ -22,21 +22,6 @@
       ]
     },
     {
-      "repo": "SRE-Nidaan",
-      "url": "https://github.com/RitwijParmar/SRE-Nidaan",
-      "description": "Production-style causal incident response copilot that helps teams identify what broke first, choose safer next actions",
-      "language": "Python",
-      "stars": 0,
-      "readme_branch": "main",
-      "media": [
-        {
-          "kind": "video",
-          "url": "https://raw.githubusercontent.com/RitwijParmar/SRE-Nidaan/main/presentations/SRE_Nidaan_Demo_Recording_Voiceover_Indian.mp4",
-          "source": "markdown_link"
-        }
-      ]
-    },
-    {
       "repo": "HelixServe",
       "url": "https://github.com/RitwijParmar/HelixServe",
       "description": "A runtime-first LLM serving engine built to show how modern inference systems actually scale",
@@ -47,6 +32,21 @@
         {
           "kind": "video",
           "url": "https://raw.githubusercontent.com/RitwijParmar/HelixServe/main/docs/assets/demo/final/helixserve_linkedin_final.mp4",
+          "source": "markdown_link"
+        }
+      ]
+    },
+    {
+      "repo": "SRE-Nidaan",
+      "url": "https://github.com/RitwijParmar/SRE-Nidaan",
+      "description": "Production-style causal incident response copilot that helps teams identify what broke first, choose safer next actions",
+      "language": "Python",
+      "stars": 0,
+      "readme_branch": "main",
+      "media": [
+        {
+          "kind": "video",
+          "url": "https://raw.githubusercontent.com/RitwijParmar/SRE-Nidaan/main/presentations/SRE_Nidaan_Demo_Recording_Voiceover_Indian.mp4",
           "source": "markdown_link"
         }
       ]
