@@ -1,4 +1,4 @@
-![header](https://capsule-render.vercel.app/api?type=waving&color=0:0b132b,40:1c2541,75:3a506b,100:5bc0be&height=230&section=header&text=Ritwij%20Aryan%20Parmar&fontSize=42&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=AI%20Systems%20Engineer%20%7C%20Inference%20Behavior%20%7C%20Autonomous%20Systems&descAlignY=62)
+![header](https://capsule-render.vercel.app/api?type=waving&color=0:0b132b,40:1c2541,75:3a506b,100:5bc0be&height=180&section=header&text=Ritwij%20Aryan%20Parmar&fontSize=40&fontColor=ffffff&animation=fadeIn&fontAlignY=40&desc=AI%20Systems%20Engineer%20%7C%20Inference%20Behavior%20%7C%20Autonomous%20Systems&descAlignY=64)
 
 <div align="center">
   <p><strong>MS in Computer Science @ University at Buffalo</strong></p>
@@ -56,7 +56,7 @@
 <td width="33%" valign="top">
 
 ### 🧠 Inference Behavior
-Request scheduling, context reuse, and response consistency under real workload pressure.
+Stable and consistent AI behavior across varied workloads.
 
 </td>
 <td width="33%" valign="top">
