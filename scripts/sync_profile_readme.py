@@ -218,14 +218,18 @@ def build_project_records(username: str, repos: Iterable[str]) -> List[PinnedPro
 
 def _render_media_block(project: PinnedProject) -> str:
     if not project.media:
-        return "🎬 Demo video coming soon"
+        return '<img src="https://img.shields.io/badge/Demo%20Video-Coming%20Soon-6b7280?style=for-the-badge" alt="Demo Coming Soon"/>'
 
     priority = {"video": 0}
     sorted_media = sorted(project.media, key=lambda item: priority.get(item.kind, 9))
     for item in sorted_media[:1]:
         if item.kind == "video":
-            return f"🎬 [Watch video]({item.url})"
-    return "🎬 Demo video coming soon"
+            return (
+                f'<a href="{item.url}">'
+                '<img src="https://img.shields.io/badge/Demo%20Video-16a34a?style=for-the-badge&logo=googleplay&logoColor=white" alt="Demo Video"/>'
+                "</a>"
+            )
+    return '<img src="https://img.shields.io/badge/Demo%20Video-Coming%20Soon-6b7280?style=for-the-badge" alt="Demo Coming Soon"/>'
 
 
 def render_pinned_markdown(projects: List[PinnedProject]) -> str:
@@ -235,23 +239,38 @@ def render_pinned_markdown(projects: List[PinnedProject]) -> str:
         summary = project.description or "No repository description yet."
         language = quote(project.language)
         lang_badge = (
-            f"![Language](https://img.shields.io/badge/Language-{language}-1f6feb?style=flat-square)"
+            f'<img src="https://img.shields.io/badge/Language-{language}-1f6feb?style=flat-square" alt="Language"/>'
         )
         stars_badge = (
-            f"![Stars](https://img.shields.io/badge/Stars-{project.stars}-f39c12?style=flat-square&logo=github&logoColor=white)"
+            f'<img src="https://img.shields.io/badge/Stars-{project.stars}-f59e0b?style=flat-square&logo=github&logoColor=white" alt="Stars"/>'
+        )
+        repo_button = (
+            f'<a href="{project.url}">'
+            '<img src="https://img.shields.io/badge/Repository-111827?style=for-the-badge&logo=github&logoColor=white" alt="Repository"/>'
+            "</a>"
         )
         parts.extend(
             [
-                f"### 🚀 [{project.repo}]({project.url})",
-                summary,
-                f"{lang_badge} {stars_badge}",
-                f"🔗 [Repository]({project.url}) · {media_block}",
+                "<table>",
+                "<tr>",
+                '<td width="100%">',
+                f'<h3>🚀 <a href="{project.url}">{project.repo}</a></h3>',
+                f"<p>{summary}</p>",
+                "<p>",
+                f"  {lang_badge} {stars_badge}",
+                "</p>",
+                "<p>",
+                f"  {repo_button}",
+                f"  {media_block}",
+                "</p>",
+                "</td>",
+                "</tr>",
+                "</table>",
             ]
         )
         if idx != len(projects) - 1:
             parts.append("")
-            parts.append("---")
-            parts.append("")
+
     return "\n".join(parts).rstrip() + "\n"
 
 
