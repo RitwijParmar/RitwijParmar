@@ -4,7 +4,7 @@
 Features:
 - Scrape pinned repos from public profile page.
 - Pull each pinned repo README.
-- Extract demo media links (mp4/webm/gif or README demo links).
+- Extract demo video links from README and fallback repo assets.
 - Render markdown section and inject into README markers.
 """
 
@@ -139,6 +139,41 @@ def _extract_media_links(readme_text: str, username: str, repo: str, branch: str
     return media
 
 
+def _repo_video_assets(username: str, repo: str, branch: str) -> List[str]:
+    tree_api = f"https://api.github.com/repos/{username}/{repo}/git/trees/{branch}?recursive=1"
+    response = requests.get(tree_api, timeout=30)
+    if response.status_code != 200:
+        return []
+
+    items = response.json().get("tree", [])
+    video_paths: List[str] = []
+    for item in items:
+        if item.get("type") != "blob":
+            continue
+        path = item.get("path", "")
+        lower = path.lower()
+        if lower.endswith((".mp4", ".webm", ".mov")):
+            video_paths.append(path)
+
+    def rank(path: str) -> tuple[int, int]:
+        lower = path.lower()
+        score = 0
+        if "demo" in lower:
+            score -= 4
+        if "linkedin" in lower:
+            score -= 3
+        if "recording" in lower:
+            score -= 2
+        if "final" in lower:
+            score -= 2
+        if "/raw/" in lower or lower.startswith("raw/"):
+            score += 4
+        return (score, len(path))
+
+    ordered = sorted(video_paths, key=rank)
+    return [f"https://raw.githubusercontent.com/{username}/{repo}/{branch}/{path}" for path in ordered]
+
+
 def fetch_readme(username: str, repo: str) -> tuple[str, str]:
     for branch in ("main", "master"):
         # Resolve branch -> commit SHA first to avoid stale CDN reads on branch aliases.
@@ -163,6 +198,9 @@ def build_project_records(username: str, repos: Iterable[str]) -> List[PinnedPro
         meta = get_repo_metadata(username, repo)
         branch, readme = fetch_readme(username, repo)
         media = _extract_media_links(readme, username, repo, branch)
+        if not media:
+            for url in _repo_video_assets(username, repo, branch)[:2]:
+                media.append(ProjectMedia(kind="video", url=url, source="repo_tree"))
         records.append(
             PinnedProject(
                 repo=repo,
@@ -179,31 +217,28 @@ def build_project_records(username: str, repos: Iterable[str]) -> List[PinnedPro
 
 def _render_media_block(project: PinnedProject) -> str:
     if not project.media:
-        return "_Demo video not linked in project README yet._"
+        return "_Demo video not available yet._"
 
-    lines = []
     priority = {"video": 0}
     sorted_media = sorted(project.media, key=lambda item: priority.get(item.kind, 9))
     for item in sorted_media[:1]:
         if item.kind == "video":
-            lines.append(
-                f'<video src="{item.url}" controls muted playsinline width="100%"></video>'
-            )
-    return "\n".join(lines)
+            return f"**Demo:** [Watch video]({item.url})"
+    return "_Demo video not available yet._"
 
 
 def render_pinned_markdown(projects: List[PinnedProject]) -> str:
-    parts: List[str] = []
+    parts: List[str] = [
+        "| Project | Summary | Stack | Demo |",
+        "|---|---|---|---|",
+    ]
     for project in projects:
         media_block = _render_media_block(project)
+        summary = project.description or "No repository description yet."
+        stack = f"`{project.language}` · ⭐ `{project.stars}`"
         parts.extend(
             [
-                f"### [{project.repo}]({project.url})",
-                f"{project.description or 'No repository description yet.'}",
-                f"`{project.language}` | ⭐ `{project.stars}` | [Repository]({project.url})",
-                "",
-                media_block,
-                "",
+                f"| [{project.repo}]({project.url}) | {summary} | {stack} | {media_block} |",
             ]
         )
     return "\n".join(parts).rstrip() + "\n"
