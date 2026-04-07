@@ -12,9 +12,9 @@
 
 ## ⚡ Focus Areas
 
-| Runtime Engineering | GPU Performance | Production Delivery |
+| LLM Runtime Systems | GPU Optimization | Robotics + Reliability |
 |---|---|---|
-| Paged KV-cache, scheduling, decode loop optimization | CUDA/Triton kernels, graph replay, profiler-led tuning | APIs, deployment, observability, benchmark-driven iteration |
+| Paged KV-cache, continuous batching, chunked prefill, and decode-path scheduling | CUDA Graph replay, Triton kernels, and profiler-led latency tuning (Nsight workflow) | GPS-denied robotics pipelines plus production-ready API, CI/CD, and observability practices |
 
 ## 🧠 Experience Highlights
 
