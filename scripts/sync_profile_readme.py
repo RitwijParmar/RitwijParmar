@@ -45,7 +45,7 @@ PROJECTS = [
             "LLM serving runtime on GCP NVIDIA L4 with paged KV cache, continuous batching, "
             "prefix caching, CUDA Graph decode, and benchmark instrumentation."
         ),
-        tags=["LLM Serving", "CUDA Graphs", "GCP L4"],
+        tags=["Paged KV Cache", "Continuous Batching", "CUDA Graph Decode"],
         demo_url="https://storage.googleapis.com/ritwij-demo-videos-2281c357/helixserve_linkedin_final.mp4",
     ),
     Project(
@@ -55,7 +55,7 @@ PROJECTS = [
             "Controller-led multilingual mental-health GenAI system for English, Hindi, and "
             "Hinglish PHQ-9/GAD-7 item-level assessment with evidence extraction and safety routing."
         ),
-        tags=["GenAI Runtime", "Cloud Run", "Safety"],
+        tags=["Evidence Extraction", "PHQ/GAD Scoring", "Safety Routing"],
         live_url="https://manovarta-runtime-ciiiagnzaq-uk.a.run.app",
         demo_url="https://storage.googleapis.com/ritwij-demo-videos-2281c357/manovarta_final_demo.mp4",
     ),
@@ -66,7 +66,7 @@ PROJECTS = [
             "Incident response copilot using Next.js, FastAPI, vLLM, telemetry grounding, "
             "runbook retrieval, remediation gating, and analyst feedback loops."
         ),
-        tags=["SRE Copilot", "vLLM", "FastAPI"],
+        tags=["Telemetry Grounding", "Remediation Gates", "RLHF Pipeline"],
         live_url="https://sre-nidaan-122722888597.us-east4.run.app",
         demo_url="https://storage.googleapis.com/ritwij-demo-videos-2281c357/sre_nidaan_demo.mp4",
     ),
@@ -77,7 +77,7 @@ PROJECTS = [
             "Cloud-native decision engine for supply operations using Vertex AI Search, "
             "conversational APIs, BigQuery pipelines, operational traces, and cost attribution."
         ),
-        tags=["Vertex AI", "BigQuery", "Operations"],
+        tags=["Vertex AI Search", "BigQuery Cost Attribution", "Playbook Tracing"],
         demo_url=(
             "https://raw.githubusercontent.com/RitwijParmar/nervaflow-intelligence/main/"
             "artifacts/video/nervaflow_demo_linkedin_1080p.mp4"
@@ -97,8 +97,8 @@ def get_repo_meta(repo: str) -> dict:
 
 
 def badge(label: str, value: str, color: str, logo: str | None = None) -> str:
-    safe_label = quote(label.replace("-", "--"))
-    safe_value = quote(value.replace("-", "--"))
+    safe_label = quote(label.replace("-", "--"), safe="")
+    safe_value = quote(value.replace("-", "--"), safe="")
     logo_part = f"&logo={quote(logo)}&logoColor=white" if logo else ""
     return (
         f'<img src="https://img.shields.io/badge/{safe_label}-{safe_value}-{color}'
@@ -113,7 +113,7 @@ def link_badge(label: str, url: str, color: str, logo: str | None = None) -> str
 def render_card(project: Project, meta: dict) -> str:
     language = meta.get("language") or "Code"
     stars = str(meta.get("stargazers_count") or 0)
-    tag_badges = " ".join(badge("Stack", tag, "0f766e") for tag in project.tags)
+    tag_badges = " ".join(badge("Signal", tag, "0f766e") for tag in project.tags)
     links = [
         link_badge("GitHub", project.repo_url, "1e3a8a", "github"),
     ]
