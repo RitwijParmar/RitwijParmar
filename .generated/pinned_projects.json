@@ -1,0 +1,65 @@
+{
+  "profile": "https://github.com/RitwijParmar",
+  "projects": [
+    {
+      "title": "HelixServe",
+      "repo": "HelixServe",
+      "description": "LLM serving runtime on GCP NVIDIA L4 with paged KV cache, continuous batching, prefix caching, CUDA Graph decode, and benchmark instrumentation.",
+      "tags": [
+        "LLM Serving",
+        "CUDA Graphs",
+        "GCP L4"
+      ],
+      "live_url": null,
+      "demo_url": "https://storage.googleapis.com/ritwij-demo-videos-2281c357/helixserve_linkedin_final.mp4",
+      "repo_url": "https://github.com/RitwijParmar/HelixServe",
+      "language": "Python",
+      "stars": 0
+    },
+    {
+      "title": "ManoVarta",
+      "repo": "ManoVarta",
+      "description": "Controller-led multilingual mental-health GenAI system for English, Hindi, and Hinglish PHQ-9/GAD-7 item-level assessment with evidence extraction and safety routing.",
+      "tags": [
+        "GenAI Runtime",
+        "Cloud Run",
+        "Safety"
+      ],
+      "live_url": "https://manovarta-runtime-ciiiagnzaq-uk.a.run.app",
+      "demo_url": "https://storage.googleapis.com/ritwij-demo-videos-2281c357/manovarta_final_demo.mp4",
+      "repo_url": "https://github.com/RitwijParmar/ManoVarta",
+      "language": "Python",
+      "stars": 1
+    },
+    {
+      "title": "SRE-Nidaan",
+      "repo": "SRE-Nidaan",
+      "description": "Incident response copilot using Next.js, FastAPI, vLLM, telemetry grounding, runbook retrieval, remediation gating, and analyst feedback loops.",
+      "tags": [
+        "SRE Copilot",
+        "vLLM",
+        "FastAPI"
+      ],
+      "live_url": "https://sre-nidaan-122722888597.us-east4.run.app",
+      "demo_url": "https://storage.googleapis.com/ritwij-demo-videos-2281c357/sre_nidaan_demo.mp4",
+      "repo_url": "https://github.com/RitwijParmar/SRE-Nidaan",
+      "language": "Python",
+      "stars": 0
+    },
+    {
+      "title": "Nervaflow Intelligence",
+      "repo": "nervaflow-intelligence",
+      "description": "Cloud-native decision engine for supply operations using Vertex AI Search, conversational APIs, BigQuery pipelines, operational traces, and cost attribution.",
+      "tags": [
+        "Vertex AI",
+        "BigQuery",
+        "Operations"
+      ],
+      "live_url": null,
+      "demo_url": "https://raw.githubusercontent.com/RitwijParmar/nervaflow-intelligence/main/artifacts/video/nervaflow_demo_linkedin_1080p.mp4",
+      "repo_url": "https://github.com/RitwijParmar/nervaflow-intelligence",
+      "language": "Python",
+      "stars": 2
+    }
+  ]
+}
