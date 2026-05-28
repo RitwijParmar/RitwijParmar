@@ -1,10 +1,22 @@
-# Ritwij Aryan Parmar
+<div align="center">
+  <h1>Ritwij Aryan Parmar</h1>
+  <h3>AI Systems Engineer</h3>
 
-AI Systems Engineer specializing in LLM serving runtimes, robotics perception, and high-throughput backend infrastructure.
+  <p>
+    LLM serving runtimes · robotics perception · high-throughput backend infrastructure
+  </p>
 
-MS in Computer Science and Engineering, University at Buffalo. Available full-time immediately.
+  <p>
+    <img src="https://img.shields.io/badge/MS%20Computer%20Science-University%20at%20Buffalo-1e3a8a?style=for-the-badge" alt="MS Computer Science, University at Buffalo"/>
+    <img src="https://img.shields.io/badge/Available-Full--Time%20Immediately-047857?style=for-the-badge" alt="Available full-time immediately"/>
+  </p>
 
-[LinkedIn](https://www.linkedin.com/in/ritwij-aryan-parmar-716024211/) | [Email](mailto:ritwij.aryan.parmar@gmail.com) | [GitHub](https://github.com/RitwijParmar)
+  <p>
+    <a href="https://www.linkedin.com/in/ritwij-aryan-parmar-716024211/"><img src="https://img.shields.io/badge/LinkedIn-Connect-0a66c2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
+    <a href="mailto:ritwij.aryan.parmar@gmail.com"><img src="https://img.shields.io/badge/Email-Contact-ea4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"/></a>
+    <a href="https://github.com/RitwijParmar"><img src="https://img.shields.io/badge/GitHub-Portfolio-111827?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"/></a>
+  </p>
+</div>
 
 ## Focus
 
