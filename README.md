@@ -48,6 +48,10 @@ I build systems that make AI products usable under real constraints: latency, th
   <img src="https://github-readme-activity-graph.vercel.app/graph?username=RitwijParmar&hide_border=true&area=true&bg_color=ffffff&color=334155&line=047857&point=f97316&area_color=d1fae5" alt="GitHub contribution activity graph"/>
 </div>
 
+<p align="center">
+  <a href="./docs/github-achievement-plan.md">Achievement growth plan</a>
+</p>
+
 ## Featured Systems
 
 <!-- START:DYNAMIC_PINNED -->
