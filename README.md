@@ -26,7 +26,7 @@ I build systems that make AI products usable under real constraints: latency, th
 ## GitHub Signal
 
 <div align="center">
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=RitwijParmar&theme=github" alt="GitHub profile contribution details"/>
+  <img src="assets/github-signal.svg" alt="GitHub profile contribution details"/>
 </div>
 
 ## Featured Systems
