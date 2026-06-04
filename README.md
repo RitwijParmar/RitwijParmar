@@ -23,6 +23,31 @@
 
 I build systems that make AI products usable under real constraints: latency, throughput, observability, deployment reliability, and evaluation quality. My strongest work sits at the intersection of LLM infrastructure, cloud-native backend services, and robotics/autonomy pipelines.
 
+## GitHub Signal
+
+<div align="center">
+  <p>
+    <img src="https://komarev.com/ghpvc/?username=RitwijParmar&style=for-the-badge&color=1e3a8a" alt="Profile views"/>
+    <img src="https://img.shields.io/github/followers/RitwijParmar?style=for-the-badge&label=Followers&logo=github&color=047857" alt="GitHub followers"/>
+    <img src="https://img.shields.io/github/stars/RitwijParmar?affiliations=OWNER%2CCOLLABORATOR&style=for-the-badge&label=Stars&logo=github&color=f97316" alt="GitHub stars"/>
+  </p>
+
+  <p>
+    <img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=RitwijParmar&theme=github" alt="Ritwij's GitHub stats"/>
+    <img src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=RitwijParmar&theme=github&utcOffset=-4" alt="Ritwij's productive coding time"/>
+  </p>
+
+  <p>
+    <img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=RitwijParmar&theme=github" alt="Repos per language"/>
+  </p>
+
+  <p>
+    <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=RitwijParmar&theme=github" alt="GitHub profile contribution details"/>
+  </p>
+
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=RitwijParmar&hide_border=true&area=true&bg_color=ffffff&color=334155&line=047857&point=f97316&area_color=d1fae5" alt="GitHub contribution activity graph"/>
+</div>
+
 ## Featured Systems
 
 <!-- START:DYNAMIC_PINNED -->
