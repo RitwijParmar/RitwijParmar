@@ -48,6 +48,16 @@ I build systems that make AI products usable under real constraints: latency, th
   <img src="https://github-readme-activity-graph.vercel.app/graph?username=RitwijParmar&hide_border=true&area=true&bg_color=ffffff&color=334155&line=047857&point=f97316&area_color=d1fae5" alt="GitHub contribution activity graph"/>
 </div>
 
+<div align="center">
+  <a href="https://github.com/RitwijParmar?tab=achievements"><img src="https://img.shields.io/badge/Achievement-Pull%20Shark%20x2-1e3a8a?style=for-the-badge&logo=github&logoColor=white" alt="Achievement: Pull Shark x2"/></a>
+  <a href="https://github.com/RitwijParmar?tab=achievements"><img src="https://img.shields.io/badge/Achievement-Pair%20Extraordinaire-047857?style=for-the-badge&logo=github&logoColor=white" alt="Achievement: Pair Extraordinaire"/></a>
+  <a href="https://github.com/RitwijParmar?tab=achievements"><img src="https://img.shields.io/badge/Achievement-Quickdraw-f97316?style=for-the-badge&logo=github&logoColor=white" alt="Achievement: Quickdraw"/></a>
+  <br/>
+  <a href="./docs/github-achievement-plan.md"><img src="https://img.shields.io/badge/Next-Pull%20Shark%20Tiers-334155?style=flat-square" alt="Next target: Pull Shark tiers"/></a>
+  <a href="./docs/github-achievement-plan.md"><img src="https://img.shields.io/badge/Next-YOLO-334155?style=flat-square" alt="Next target: YOLO"/></a>
+  <a href="./docs/github-achievement-plan.md"><img src="https://img.shields.io/badge/Next-Starstruck-334155?style=flat-square" alt="Next target: Starstruck"/></a>
+</div>
+
 <p align="center">
   <a href="./docs/github-achievement-plan.md">Achievement growth plan</a>
 </p>
