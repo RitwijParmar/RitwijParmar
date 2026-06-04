@@ -26,41 +26,8 @@ I build systems that make AI products usable under real constraints: latency, th
 ## GitHub Signal
 
 <div align="center">
-  <p>
-    <img src="https://komarev.com/ghpvc/?username=RitwijParmar&style=for-the-badge&color=1e3a8a" alt="Profile views"/>
-    <img src="https://img.shields.io/github/followers/RitwijParmar?style=for-the-badge&label=Followers&logo=github&color=047857" alt="GitHub followers"/>
-    <img src="https://img.shields.io/github/stars/RitwijParmar?affiliations=OWNER%2CCOLLABORATOR&style=for-the-badge&label=Stars&logo=github&color=f97316" alt="GitHub stars"/>
-  </p>
-
-  <p>
-    <img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=RitwijParmar&theme=github" alt="Ritwij's GitHub stats"/>
-    <img src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=RitwijParmar&theme=github&utcOffset=-4" alt="Ritwij's productive coding time"/>
-  </p>
-
-  <p>
-    <img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=RitwijParmar&theme=github" alt="Repos per language"/>
-  </p>
-
-  <p>
-    <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=RitwijParmar&theme=github" alt="GitHub profile contribution details"/>
-  </p>
-
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=RitwijParmar&hide_border=true&area=true&bg_color=ffffff&color=334155&line=047857&point=f97316&area_color=d1fae5" alt="GitHub contribution activity graph"/>
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=RitwijParmar&theme=github" alt="GitHub profile contribution details"/>
 </div>
-
-<div align="center">
-  <a href="https://github.com/RitwijParmar?tab=achievements"><img src="https://img.shields.io/badge/Achievement-Pull%20Shark%20x2-1e3a8a?style=for-the-badge&logo=github&logoColor=white" alt="Achievement: Pull Shark x2"/></a>
-  <a href="https://github.com/RitwijParmar?tab=achievements"><img src="https://img.shields.io/badge/Achievement-Pair%20Extraordinaire-047857?style=for-the-badge&logo=github&logoColor=white" alt="Achievement: Pair Extraordinaire"/></a>
-  <a href="https://github.com/RitwijParmar?tab=achievements"><img src="https://img.shields.io/badge/Achievement-Quickdraw-f97316?style=for-the-badge&logo=github&logoColor=white" alt="Achievement: Quickdraw"/></a>
-  <br/>
-  <a href="./docs/github-achievement-plan.md"><img src="https://img.shields.io/badge/Next-Pull%20Shark%20Tiers-334155?style=flat-square" alt="Next target: Pull Shark tiers"/></a>
-  <a href="./docs/github-achievement-plan.md"><img src="https://img.shields.io/badge/Next-YOLO-334155?style=flat-square" alt="Next target: YOLO"/></a>
-  <a href="./docs/github-achievement-plan.md"><img src="https://img.shields.io/badge/Next-Starstruck-334155?style=flat-square" alt="Next target: Starstruck"/></a>
-</div>
-
-<p align="center">
-  <a href="./docs/github-achievement-plan.md">Achievement growth plan</a>
-</p>
 
 ## Featured Systems
 
