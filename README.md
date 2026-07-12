@@ -1,10 +1,10 @@
 <div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=rect&amp;height=145&amp;color=0:0f172a,55:1e3a8a,100:047857&amp;text=Ritwij%20Aryan%20Parmar&amp;fontColor=ffffff&amp;fontSize=42&amp;fontAlignY=42&amp;desc=LLM%20Inference%20%7C%20Robotics%20Perception%20%7C%20High-Throughput%20Backend%20Systems&amp;descSize=16&amp;descAlignY=70" alt="Ritwij Aryan Parmar — LLM Inference, Robotics Perception, High-Throughput Backend Systems"/>
+  <img src="https://capsule-render.vercel.app/api?type=rect&amp;height=145&amp;color=0:0f172a,55:1e3a8a,100:047857&amp;text=Ritwij%20Aryan%20Parmar&amp;fontColor=ffffff&amp;fontSize=42&amp;fontAlignY=42&amp;desc=LLM%20Inference%20%7C%20GenAI%20Evaluation%20%7C%20Backend%20Data%20Systems&amp;descSize=16&amp;descAlignY=70" alt="Ritwij Aryan Parmar — LLM Inference, GenAI Evaluation, Backend Data Systems"/>
 
-  <h3>AI Systems Engineer</h3>
+  <h3>Software Engineer | ML Systems, LLM Inference, Backend Data Workflows</h3>
 
   <p>
-    LLM inference and serving runtimes · robotics perception · high-throughput backend infrastructure
+    LLM serving runtimes · GenAI evaluation pipelines · cloud-backed data and backend systems
   </p>
 
   <p>
@@ -21,13 +21,7 @@
 
 ## Focus
 
-I build systems that make AI products usable under real constraints: latency, throughput, observability, deployment reliability, and evaluation quality. My strongest work sits at the intersection of LLM infrastructure, cloud-native backend services, and robotics/autonomy pipelines.
-
-## GitHub Signal
-
-<div align="center">
-  <img src="assets/github-signal.svg" alt="GitHub profile contribution details"/>
-</div>
+I build systems that make AI products usable under real constraints: latency, throughput, observability, deployment reliability, and evaluation quality. My strongest work is in LLM inference, GenAI evaluation, backend services, and structured data workflows, with a compact robotics/perception thread through inspection-video segmentation.
 
 ## Featured Systems
 
@@ -61,11 +55,11 @@ I build systems that make AI products usable under real constraints: latency, th
 <a href="https://github.com/RitwijParmar/SRE-Nidaan"><img src="https://img.shields.io/badge/GitHub-Open-1e3a8a?style=flat-square&logo=github&logoColor=white" alt="GitHub: Open"/></a> <a href="https://sre-nidaan-122722888597.us-east4.run.app"><img src="https://img.shields.io/badge/Live-Open-047857?style=flat-square" alt="Live: Open"/></a> <a href="https://storage.googleapis.com/ritwij-demo-videos-2281c357/sre_nidaan_demo.mp4"><img src="https://img.shields.io/badge/Demo-Open-f97316?style=flat-square" alt="Demo: Open"/></a>
 </td>
 <td width="50%" valign="top">
-<h3><a href="https://github.com/RitwijParmar/nervaflow-intelligence">Nervaflow Intelligence</a></h3>
-<sub>Cloud-native decision engine for supply operations using Vertex AI Search, conversational APIs, BigQuery pipelines, operational traces, and cost attribution.</sub><br/><br/>
-<img src="https://img.shields.io/badge/Language-Python-334155?style=flat-square" alt="Language: Python"/> <img src="https://img.shields.io/badge/Stars-2-334155?style=flat-square&logo=github&logoColor=white" alt="Stars: 2"/><br/><br/>
-<img src="https://img.shields.io/badge/Signal-Vertex%20AI%20Search-0f766e?style=flat-square" alt="Signal: Vertex AI Search"/> <img src="https://img.shields.io/badge/Signal-BigQuery%20Cost%20Attribution-0f766e?style=flat-square" alt="Signal: BigQuery Cost Attribution"/> <img src="https://img.shields.io/badge/Signal-Playbook%20Tracing-0f766e?style=flat-square" alt="Signal: Playbook Tracing"/><br/><br/>
-<a href="https://github.com/RitwijParmar/nervaflow-intelligence"><img src="https://img.shields.io/badge/GitHub-Open-1e3a8a?style=flat-square&logo=github&logoColor=white" alt="GitHub: Open"/></a> <a href="https://raw.githubusercontent.com/RitwijParmar/nervaflow-intelligence/main/artifacts/video/nervaflow_demo_linkedin_1080p.mp4"><img src="https://img.shields.io/badge/Demo-Open-f97316?style=flat-square" alt="Demo: Open"/></a>
+<h3><a href="https://github.com/RitwijParmar/RetailPulse-Lakehouse">RetailPulse Lakehouse</a></h3>
+<sub>PySpark and Databricks retail lakehouse with Bronze, Silver, and Gold jobs, unit-tested transformations, GitHub Actions CI, and benchmarked analytical marts.</sub><br/><br/>
+<img src="https://img.shields.io/badge/Language-Python-334155?style=flat-square" alt="Language: Python"/> <img src="https://img.shields.io/badge/Stars-0-334155?style=flat-square&logo=github&logoColor=white" alt="Stars: 0"/><br/><br/>
+<img src="https://img.shields.io/badge/Signal-PySpark-0f766e?style=flat-square" alt="Signal: PySpark"/> <img src="https://img.shields.io/badge/Signal-Delta%20Lake-0f766e?style=flat-square" alt="Signal: Delta Lake"/> <img src="https://img.shields.io/badge/Signal-Data%20Quality-0f766e?style=flat-square" alt="Signal: Data Quality"/><br/><br/>
+<a href="https://github.com/RitwijParmar/RetailPulse-Lakehouse"><img src="https://img.shields.io/badge/GitHub-Open-1e3a8a?style=flat-square&logo=github&logoColor=white" alt="GitHub: Open"/></a>
 </td>
 </tr>
 </table>
@@ -73,28 +67,25 @@ I build systems that make AI products usable under real constraints: latency, th
 
 ## Technical Experience
 
-**Distributed Robotics and Networked Embedded Sensing Lab** — Research Aide, Robotics Systems Engineering
+**Distributed Robotics and Networked Embedded Sensing (DRONES) Lab** — Research Aide
 
-- Reduced mapping drift to under 1.2% across 500m of GPS-denied environments by building a ROS2 visual SLAM pipeline for Boston Dynamics Spot with Gaussian Splatting integration.
-- Improved LiDAR and VIO fusion for low-texture subterranean navigation, reducing trajectory estimation error by 30% while sustaining 20 Hz real-time state estimation.
+- Built and deployed a culvert-barrel defect segmentation workflow with SAM-3 prompts, PyTorch serving, JSON mask/polygon outputs, per-run IoU/F1 reports, and approximately 2.3s p95 keyframe inference.
 
 **Tata Elxsi** — Software Engineer Intern
 
-- Migrated autonomous vehicle software from ROS1 to ROS2 and tuned DDS QoS behavior in CARLA, reducing inter-module latency by 40% and achieving sub-100 ms communication latency.
-- Built an Extended Kalman Filter-based vehicle state estimator and safety-constrained route planner with deterministic state transitions, bounded-latency path generation, and validation hooks.
+- Built synthetic-data and failure-mining pipelines for perception model evaluation, synchronizing RGB, depth, semantic labels, pose, and calibration data across 120+ scenario tests.
 
 **LLMate.ai** — Backend Engineer Intern
 
-- Built asynchronous backend services with Spring Boot and RabbitMQ for production data workflows, reducing p95 response latency by 40%.
-- Deployed a GPT-3.5-based text-to-SQL workflow over 50,000 structured records and set up Docker/GitHub Actions CI/CD.
+- Built a governed LLM-to-SQL analytics layer over 50,000+ records with schema retrieval, parser validation, read-only policy enforcement, dry-run checks, result caching, and replayable evaluations.
 
 ## Stack
 
 - **Languages:** Python, C++, Java, SQL
-- **AI systems:** LLM inference, model serving, vLLM, Vertex AI, QLoRA, RLHF, CUDA Graphs, prompt evaluation
-- **Backend and cloud:** FastAPI, Spring Boot, Docker, GCP, Cloud Run, BigQuery, RabbitMQ, distributed systems, observability, CI/CD
-- **Robotics and autonomy:** ROS2, SLAM, LiDAR/VIO sensor fusion, CARLA, state estimation
+- **AI systems:** LLM inference, model serving, vLLM, QLoRA, RLHF-style alignment, CUDA Graphs, model evaluation
+- **Backend and cloud:** FastAPI, Spring Boot, Docker, GCP, Cloud Run, Hugging Face Endpoints, BigQuery, observability, CI/CD
+- **Data and perception:** SQL validation, RAG, schema checks, JSON outputs, computer vision, segmentation, perception evaluation
 
 ## Current Direction
 
-I am looking for AI infrastructure, backend/product engineering, ML systems, or robotics/autonomy roles where I can own systems end to end: from low-level performance and reliability work to shipped user-facing demos.
+I am looking for software engineering, ML engineering, AI infrastructure, backend/platform, or data-intensive applied AI roles where I can own systems end to end: from model/runtime behavior to production services, evaluation loops, and shipped demos.
