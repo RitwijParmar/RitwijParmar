@@ -21,7 +21,7 @@
 
 ## Focus
 
-I build systems that make AI products usable under real constraints: latency, throughput, observability, deployment reliability, and evaluation quality. My strongest work is in LLM inference, GenAI evaluation, backend services, and structured data workflows, with a compact robotics/perception thread through inspection-video segmentation.
+I build the parts of AI products that have to hold up after the demo: LLM serving benchmarks, guarded GenAI workflows, backend data services, deployment logs, and evaluation loops. The robotics thread in my background is now focused on perception work: turning culvert inspection footage into defect masks, polygons, and reviewable model outputs.
 
 ## Featured Systems
 
@@ -69,15 +69,21 @@ I build systems that make AI products usable under real constraints: latency, th
 
 **Distributed Robotics and Networked Embedded Sensing (DRONES) Lab** — Research Aide
 
-- Built and deployed a culvert-barrel defect segmentation workflow with SAM-3 prompts, PyTorch serving, JSON mask/polygon outputs, per-run IoU/F1 reports, and approximately 2.3s p95 keyframe inference.
+- Built the ML side of a culvert-inspection workflow: sampled keyframes from inspection video, used SAM-3 promptable segmentation for crack/spalling/void masks, and exported JSON masks and polygons for downstream review.
+- Packaged PyTorch inference behind an endpoint-style workflow with frame inputs, model-versioned artifacts, endpoint logs, and per-run IoU/F1 reports; measured about 0.74 mask IoU and 2.3s p95 keyframe inference.
+- Robotics context: the segmentation output was designed for culvert/robot inspection runs, but the core contribution was perception, model serving, and evaluation rather than navigation or controls.
 
 **Tata Elxsi** — Software Engineer Intern
 
-- Built synthetic-data and failure-mining pipelines for perception model evaluation, synchronizing RGB, depth, semantic labels, pose, and calibration data across 120+ scenario tests.
+- Worked on the data and evaluation side of ADAS perception validation, building Python pipelines that paired scenario metadata with synchronized RGB, depth, semantic-label, pose, and calibration outputs from simulator runs.
+- Converted raw run logs into replayable perception-evaluation sets across 120+ scenario tests, including lane, object, lighting, and weather variations.
+- Added checks for missing frames, timestamp drift, label mismatch, and calibration gaps so bad scenario runs failed early instead of producing unreliable model-evaluation reports.
 
 **LLMate.ai** — Backend Engineer Intern
 
-- Built a governed LLM-to-SQL analytics layer over 50,000+ records with schema retrieval, parser validation, read-only policy enforcement, dry-run checks, result caching, and replayable evaluations.
+- Built backend pieces for a governed natural-language analytics workflow over 50,000+ structured records: schema retrieval, parser validation, read-only query enforcement, dry-run checks, result caching, and replayable evaluation cases.
+- Separated user-facing requests from slower LLM/database work with asynchronous task execution, status tracking, retry paths, and failure logs, which made long-running report generation easier to debug.
+- Kept the LLM layer grounded in table metadata and query policies instead of a plain prompt wrapper, so user questions produced auditable SQL and bounded outputs.
 
 ## Stack
 
@@ -88,4 +94,4 @@ I build systems that make AI products usable under real constraints: latency, th
 
 ## Current Direction
 
-I am looking for software engineering, ML engineering, AI infrastructure, backend/platform, or data-intensive applied AI roles where I can own systems end to end: from model/runtime behavior to production services, evaluation loops, and shipped demos.
+I am looking for software engineering, ML engineering, backend/platform, and applied AI roles where the work is close to shipped systems: runtime behavior, service reliability, data contracts, evaluation quality, and production-facing demos.
