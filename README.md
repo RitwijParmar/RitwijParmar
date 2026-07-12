@@ -55,11 +55,11 @@ I build the parts of AI products that have to hold up after the demo: LLM servin
 <a href="https://github.com/RitwijParmar/SRE-Nidaan"><img src="https://img.shields.io/badge/GitHub-Open-1e3a8a?style=flat-square&logo=github&logoColor=white" alt="GitHub: Open"/></a> <a href="https://sre-nidaan-122722888597.us-east4.run.app"><img src="https://img.shields.io/badge/Live-Open-047857?style=flat-square" alt="Live: Open"/></a> <a href="https://storage.googleapis.com/ritwij-demo-videos-2281c357/sre_nidaan_demo.mp4"><img src="https://img.shields.io/badge/Demo-Open-f97316?style=flat-square" alt="Demo: Open"/></a>
 </td>
 <td width="50%" valign="top">
-<h3><a href="https://github.com/RitwijParmar/RetailPulse-Lakehouse">RetailPulse Lakehouse</a></h3>
-<sub>PySpark and Databricks retail lakehouse with Bronze, Silver, and Gold jobs, unit-tested transformations, GitHub Actions CI, and benchmarked analytical marts.</sub><br/><br/>
-<img src="https://img.shields.io/badge/Language-Python-334155?style=flat-square" alt="Language: Python"/> <img src="https://img.shields.io/badge/Stars-0-334155?style=flat-square&logo=github&logoColor=white" alt="Stars: 0"/><br/><br/>
-<img src="https://img.shields.io/badge/Signal-PySpark-0f766e?style=flat-square" alt="Signal: PySpark"/> <img src="https://img.shields.io/badge/Signal-Delta%20Lake-0f766e?style=flat-square" alt="Signal: Delta Lake"/> <img src="https://img.shields.io/badge/Signal-Data%20Quality-0f766e?style=flat-square" alt="Signal: Data Quality"/><br/><br/>
-<a href="https://github.com/RitwijParmar/RetailPulse-Lakehouse"><img src="https://img.shields.io/badge/GitHub-Open-1e3a8a?style=flat-square&logo=github&logoColor=white" alt="GitHub: Open"/></a>
+<h3><a href="https://github.com/RitwijParmar/nervaflow-intelligence">Nervaflow Intelligence</a></h3>
+<sub>Cloud-native decision engine for supply operations using Vertex AI Search, conversational APIs, BigQuery pipelines, operational traces, and cost attribution.</sub><br/><br/>
+<img src="https://img.shields.io/badge/Language-Python-334155?style=flat-square" alt="Language: Python"/> <img src="https://img.shields.io/badge/Stars-2-334155?style=flat-square&logo=github&logoColor=white" alt="Stars: 2"/><br/><br/>
+<img src="https://img.shields.io/badge/Signal-Vertex%20AI%20Search-0f766e?style=flat-square" alt="Signal: Vertex AI Search"/> <img src="https://img.shields.io/badge/Signal-BigQuery%20Cost%20Attribution-0f766e?style=flat-square" alt="Signal: BigQuery Cost Attribution"/> <img src="https://img.shields.io/badge/Signal-Playbook%20Tracing-0f766e?style=flat-square" alt="Signal: Playbook Tracing"/><br/><br/>
+<a href="https://github.com/RitwijParmar/nervaflow-intelligence"><img src="https://img.shields.io/badge/GitHub-Open-1e3a8a?style=flat-square&logo=github&logoColor=white" alt="GitHub: Open"/></a> <a href="https://raw.githubusercontent.com/RitwijParmar/nervaflow-intelligence/main/artifacts/video/nervaflow_demo_linkedin_1080p.mp4"><img src="https://img.shields.io/badge/Demo-Open-f97316?style=flat-square" alt="Demo: Open"/></a>
 </td>
 </tr>
 </table>
