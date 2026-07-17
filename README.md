@@ -67,7 +67,7 @@ I build the parts of AI products that have to hold up after the demo: LLM servin
 
 ## Selected Open-Source Contributions
 
-These are merged upstream changes. The list is intentionally limited to work that changed a real runtime, evaluation path, or production-facing contract.
+I have more merged work than this list shows. These are the ones I would actually discuss in an engineering conversation because they changed a real runtime, evaluation path, or production-facing contract.
 
 - [NVIDIA Dynamo #10095](https://github.com/ai-dynamo/dynamo/pull/10095) — replaced duplicated Mooncake token-block hashing with Dynamo's shared KV-hashing contract. Added fallible validation and regression coverage for complete and partial blocks.
 - [TraceRoot #1134](https://github.com/traceroot-ai/traceroot/pull/1134) — kept live agent traces useful while they were still arriving. Git metadata now appears before the root span and the SSE stream stays open for late descendant spans.
