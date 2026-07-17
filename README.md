@@ -75,7 +75,6 @@ These are merged upstream changes. The list is intentionally limited to work tha
 - [Qdrant #9518](https://github.com/qdrant/qdrant/pull/9518) — fixed the scalar-int8 L2 quantization offset error and added metamorphic tests for translation invariance and score scaling across normal and inverted search.
 - [GreptimeDB #8341](https://github.com/GreptimeTeam/greptimedb/pull/8341) — changed Prometheus label discovery to stream catalog tables instead of doing serial table lookups. This removes a scaling problem in a path used by Grafana metric exploration.
 
-[Daft #7061](https://github.com/Eventual-Inc/Daft/pull/7061) is another merged contribution. It wires OTEL resource attributes and service-name overrides through distributed tracing and respects exporter timeout configuration.
 
 ## Releases and Benchmarks
 
