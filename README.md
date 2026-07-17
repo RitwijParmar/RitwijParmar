@@ -74,6 +74,8 @@ These are merged upstream changes. The list is intentionally limited to work tha
 - [Promptfoo #9460](https://github.com/promptfoo/promptfoo/pull/9460) — repaired configured grader reuse across direct and typed provider references. The merged change also prevents unused provider alternatives from being constructed and preserves suite environment overrides.
 - [Qdrant #9518](https://github.com/qdrant/qdrant/pull/9518) — fixed the scalar-int8 L2 quantization offset error and added metamorphic tests for translation invariance and score scaling across normal and inverted search.
 - [GreptimeDB #8341](https://github.com/GreptimeTeam/greptimedb/pull/8341) — changed Prometheus label discovery to stream catalog tables instead of doing serial table lookups. This removes a scaling problem in a path used by Grafana metric exploration.
+- [Pydantic Logfire #1981](https://github.com/pydantic/logfire/pull/1981) — added OpenAI Responses API content-part handling for text, images, and files across the modern and legacy instrumentation paths, with regression coverage for URL, file-id, and inline data forms.
+- [FiftyOne #7824](https://github.com/voxel51/fiftyone/pull/7824) — added per-keypoint OKS sigma support across IoU computation, COCO and Open Images evaluation, matching, and mAP sweeps so custom pose schemas are not forced through COCO tolerances.
 
 
 ## Releases and Benchmarks
@@ -83,7 +85,7 @@ These are merged upstream changes. The list is intentionally limited to work tha
 
 ## How I Work With Open Source
 
-I prefer staying with one project long enough to understand its review standards, respond to maintainer feedback, and follow a change into production. Right now that relationship is [NVIDIA Dynamo](https://github.com/ai-dynamo/dynamo), where the merged KV-hashing work is the starting point for deeper inference-runtime contributions.
+I do not want to collect random PR links. I pick a codebase I actually care about, stay with it through review, fix what maintainers push back on, and keep going until the change is useful in the real project. That is how I want to work with an engineering team too.
 
 
 ## Technical Experience
