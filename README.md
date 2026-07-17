@@ -65,6 +65,28 @@ I build the parts of AI products that have to hold up after the demo: LLM servin
 </table>
 <!-- END:DYNAMIC_PINNED -->
 
+## Selected Open-Source Contributions
+
+These are merged upstream changes. The list is intentionally limited to work that changed a real runtime, evaluation path, or production-facing contract.
+
+- [NVIDIA Dynamo #10095](https://github.com/ai-dynamo/dynamo/pull/10095) — replaced duplicated Mooncake token-block hashing with Dynamo's shared KV-hashing contract. Added fallible validation and regression coverage for complete and partial blocks.
+- [TraceRoot #1134](https://github.com/traceroot-ai/traceroot/pull/1134) — kept live agent traces useful while they were still arriving. Git metadata now appears before the root span and the SSE stream stays open for late descendant spans.
+- [Promptfoo #9460](https://github.com/promptfoo/promptfoo/pull/9460) — repaired configured grader reuse across direct and typed provider references. The merged change also prevents unused provider alternatives from being constructed and preserves suite environment overrides.
+- [Qdrant #9518](https://github.com/qdrant/qdrant/pull/9518) — fixed the scalar-int8 L2 quantization offset error and added metamorphic tests for translation invariance and score scaling across normal and inverted search.
+- [GreptimeDB #8341](https://github.com/GreptimeTeam/greptimedb/pull/8341) — changed Prometheus label discovery to stream catalog tables instead of doing serial table lookups. This removes a scaling problem in a path used by Grafana metric exploration.
+
+[Daft #7061](https://github.com/Eventual-Inc/Daft/pull/7061) is another merged contribution. It wires OTEL resource attributes and service-name overrides through distributed tracing and respects exporter timeout configuration.
+
+## Releases and Benchmarks
+
+- [HelixServe v0.1.0 benchmark note](https://github.com/RitwijParmar/HelixServe/blob/main/docs/releases/v0.1.0.md) — a reproducible NVIDIA L4 serving run with raw artifacts and the measured Triton cold-start limitation.
+- [Benchmark reproducibility issue](https://github.com/RitwijParmar/HelixServe/issues/5) — looking for a second GPU or real-model run with raw artifacts rather than unsupported headline numbers.
+
+## How I Work With Open Source
+
+I prefer staying with one project long enough to understand its review standards, respond to maintainer feedback, and follow a change into production. Right now that relationship is [NVIDIA Dynamo](https://github.com/ai-dynamo/dynamo), where the merged KV-hashing work is the starting point for deeper inference-runtime contributions.
+
+
 ## Technical Experience
 
 **Distributed Robotics and Networked Embedded Sensing (DRONES) Lab** — Research Aide
@@ -94,4 +116,4 @@ I build the parts of AI products that have to hold up after the demo: LLM servin
 
 ## Current Direction
 
-I am looking for software engineering, ML engineering, backend/platform, and applied AI roles where the work is close to shipped systems: runtime behavior, service reliability, data contracts, evaluation quality, and production-facing demos.
+I am looking for software engineering and ML systems roles around inference runtimes, evaluation infrastructure, backend reliability, and production AI systems. The best conversations are with engineers who care about behavior under load and correctness after the demo.
