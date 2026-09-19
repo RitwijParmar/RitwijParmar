@@ -53,6 +53,15 @@ PROJECTS = [
         demo_url="https://storage.googleapis.com/ritwij-demo-videos-2281c357/helixserve_linkedin_final.mp4",
     ),
     Project(
+        title="TickYantra",
+        repo="TickYantra",
+        description=(
+            "SLO-aware prefix-affinity control plane for SGLang with routing simulation, "
+            "load-aware scheduling, and reproducible runtime analysis."
+        ),
+        tags=["Prefix Affinity", "SLO Routing", "SGLang"],
+    ),
+    Project(
         title="ManoVarta",
         repo="ManoVarta",
         description=(
@@ -62,6 +71,16 @@ PROJECTS = [
         tags=["Evidence Extraction", "PHQ/GAD Scoring", "Safety Routing"],
         live_url="https://manovarta-runtime-ciiiagnzaq-uk.a.run.app",
         demo_url="https://storage.googleapis.com/ritwij-demo-videos-2281c357/manovarta_final_demo.mp4",
+    ),
+    Project(
+        title="ProfileProof",
+        repo="ProfileProof",
+        description=(
+            "Consent-first professional profile normalization API with provider isolation, "
+            "provenance tracking, Cloud Run deployment, and contract-tested outputs."
+        ),
+        tags=["Data Provenance", "Provider Contracts", "Cloud Run"],
+        live_url="https://profileproof-api-980932890834.us-east1.run.app",
     ),
     Project(
         title="SRE-Nidaan",
@@ -75,17 +94,32 @@ PROJECTS = [
         demo_url="https://storage.googleapis.com/ritwij-demo-videos-2281c357/sre_nidaan_demo.mp4",
     ),
     Project(
-        title="Nervaflow Intelligence",
-        repo="nervaflow-intelligence",
+        title="XRBridge",
+        repo="XRBridge",
         description=(
-            "Cloud-native decision engine for supply operations using Vertex AI Search, "
-            "conversational APIs, BigQuery pipelines, operational traces, and cost attribution."
+            "C++20 pose bridge and Unity package for validated tracking, interpolation, "
+            "coordinate transforms, and stable P/Invoke integration."
         ),
-        tags=["Vertex AI Search", "BigQuery Cost Attribution", "Playbook Tracing"],
-        demo_url=(
-            "https://raw.githubusercontent.com/RitwijParmar/nervaflow-intelligence/main/"
-            "artifacts/video/nervaflow_demo_linkedin_1080p.mp4"
+        tags=["C++20", "Pose Interpolation", "Unity P/Invoke"],
+    ),
+    Project(
+        title="vyuh-x",
+        repo="vyuh-x",
+        description=(
+            "Deterministic C++20 market microstructure engine with execution simulation, "
+            "latency-shadow replay, risk controls, and reproducible event processing."
         ),
+        tags=["Market Microstructure", "Deterministic Replay", "Risk Controls"],
+        live_url="https://ritwijparmar.github.io/vyuh-x/",
+    ),
+    Project(
+        title="MotorGuard RTOS",
+        repo="MotorGuard-RTOS",
+        description=(
+            "Zephyr RTOS condition-monitoring firmware for ARM Cortex-M with an ADXL345 "
+            "SPI driver, fixed-point DSP, watchdogs, and fault-injection tests."
+        ),
+        tags=["Zephyr RTOS", "Fixed-point DSP", "Fault Injection"],
     ),
 ]
 
@@ -120,7 +154,10 @@ def link_badge(label: str, url: str, color: str, logo: str | None = None) -> str
 
 def render_card(project: Project, meta: dict) -> str:
     language = meta.get("language") or "Code"
-    stars = str(meta.get("stargazers_count") or 0)
+    stars = meta.get("stargazers_count") or 0
+    metadata_badges = [badge("Language", language, "334155")]
+    if stars > 0:
+        metadata_badges.append(badge("Stars", str(stars), "334155", "github"))
     tag_badges = " ".join(badge("Signal", tag, "0f766e") for tag in project.tags)
     links = [
         link_badge("GitHub", project.repo_url, "1e3a8a", "github"),
@@ -135,7 +172,7 @@ def render_card(project: Project, meta: dict) -> str:
             '<td width="50%" valign="top">',
             f'<h3><a href="{project.repo_url}">{html.escape(project.title)}</a></h3>',
             f"<sub>{html.escape(project.description)}</sub><br/><br/>",
-            f'{badge("Language", language, "334155")} {badge("Stars", stars, "334155", "github")}<br/><br/>',
+            f'{" ".join(metadata_badges)}<br/><br/>',
             f"{tag_badges}<br/><br/>",
             " ".join(links),
             "</td>",
