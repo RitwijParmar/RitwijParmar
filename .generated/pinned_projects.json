@@ -17,6 +17,21 @@
       "stars": 0
     },
     {
+      "title": "TickYantra",
+      "repo": "TickYantra",
+      "description": "SLO-aware prefix-affinity control plane for SGLang with routing simulation, load-aware scheduling, and reproducible runtime analysis.",
+      "tags": [
+        "Prefix Affinity",
+        "SLO Routing",
+        "SGLang"
+      ],
+      "live_url": null,
+      "demo_url": null,
+      "repo_url": "https://github.com/RitwijParmar/TickYantra",
+      "language": "Python",
+      "stars": 0
+    },
+    {
       "title": "ManoVarta",
       "repo": "ManoVarta",
       "description": "Controller-led multilingual mental-health GenAI system for English, Hindi, and Hinglish PHQ-9/GAD-7 item-level assessment with evidence extraction and safety routing.",
@@ -30,6 +45,21 @@
       "repo_url": "https://github.com/RitwijParmar/ManoVarta",
       "language": "Python",
       "stars": 1
+    },
+    {
+      "title": "ProfileProof",
+      "repo": "ProfileProof",
+      "description": "Consent-first professional profile normalization API with provider isolation, provenance tracking, Cloud Run deployment, and contract-tested outputs.",
+      "tags": [
+        "Data Provenance",
+        "Provider Contracts",
+        "Cloud Run"
+      ],
+      "live_url": "https://profileproof-api-980932890834.us-east1.run.app",
+      "demo_url": null,
+      "repo_url": "https://github.com/RitwijParmar/ProfileProof",
+      "language": "Python",
+      "stars": 0
     },
     {
       "title": "SRE-Nidaan",
@@ -47,19 +77,49 @@
       "stars": 0
     },
     {
-      "title": "Nervaflow Intelligence",
-      "repo": "nervaflow-intelligence",
-      "description": "Cloud-native decision engine for supply operations using Vertex AI Search, conversational APIs, BigQuery pipelines, operational traces, and cost attribution.",
+      "title": "XRBridge",
+      "repo": "XRBridge",
+      "description": "C++20 pose bridge and Unity package for validated tracking, interpolation, coordinate transforms, and stable P/Invoke integration.",
       "tags": [
-        "Vertex AI Search",
-        "BigQuery Cost Attribution",
-        "Playbook Tracing"
+        "C++20",
+        "Pose Interpolation",
+        "Unity P/Invoke"
       ],
       "live_url": null,
-      "demo_url": "https://raw.githubusercontent.com/RitwijParmar/nervaflow-intelligence/main/artifacts/video/nervaflow_demo_linkedin_1080p.mp4",
-      "repo_url": "https://github.com/RitwijParmar/nervaflow-intelligence",
-      "language": "Python",
-      "stars": 2
+      "demo_url": null,
+      "repo_url": "https://github.com/RitwijParmar/XRBridge",
+      "language": "C++",
+      "stars": 0
+    },
+    {
+      "title": "vyuh-x",
+      "repo": "vyuh-x",
+      "description": "Deterministic C++20 market microstructure engine with execution simulation, latency-shadow replay, risk controls, and reproducible event processing.",
+      "tags": [
+        "Market Microstructure",
+        "Deterministic Replay",
+        "Risk Controls"
+      ],
+      "live_url": "https://ritwijparmar.github.io/vyuh-x/",
+      "demo_url": null,
+      "repo_url": "https://github.com/RitwijParmar/vyuh-x",
+      "language": "C++",
+      "stars": 0
+    },
+    {
+      "title": "MotorGuard RTOS",
+      "repo": "MotorGuard-RTOS",
+      "description": "Zephyr RTOS condition-monitoring firmware for ARM Cortex-M with an ADXL345 SPI driver, fixed-point DSP, watchdogs, and fault-injection tests.",
+      "tags": [
+        "Zephyr RTOS",
+        "Fixed-point DSP",
+        "Fault Injection"
+      ],
+      "live_url": null,
+      "demo_url": null,
+      "repo_url": "https://github.com/RitwijParmar/MotorGuard-RTOS",
+      "language": "C++",
+      "stars": 0
     }
   ]
 }
