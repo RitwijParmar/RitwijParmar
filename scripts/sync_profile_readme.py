@@ -42,6 +42,15 @@ class Project:
 
 PROJECTS = [
     Project(
+        title="SunoSentry",
+        repo="SunoSentry",
+        description=(
+            "Verifiable multi-agent voice-operations control plane with bounded MCP tools, "
+            "explicit consent, safety gates, and auditable handoffs."
+        ),
+        tags=["2,048-case evaluation", "7 tests", "CI on Python 3.11/3.12"],
+    ),
+    Project(
         title="TickYantra",
         repo="TickYantra",
         description=(
@@ -49,6 +58,24 @@ PROJECTS = [
             "simulation and reproducible runtime analysis."
         ),
         tags=["4 core test modules", "CI passing", "v0.1.0 release"],
+    ),
+    Project(
+        title="TenantVault",
+        repo="tenantvault-zero-trust-rag",
+        description=(
+            "Multi-tenant RAG service using PostgreSQL row-level security, tenant-bound "
+            "encryption, signed isolation receipts, and active breach tests."
+        ),
+        tags=["Isolation tests", "CI passing", "PostgreSQL RLS"],
+    ),
+    Project(
+        title="LekhaSignal",
+        repo="LekhaSignal",
+        description=(
+            "Snowflake revenue-reliability control plane with dbt, Airflow, data contracts, "
+            "reconciliation, and bounded read-only MCP investigations."
+        ),
+        tags=["3 test modules", "CI passing", "Verified Snowflake run"],
     ),
     Project(
         title="ProfileProof",
@@ -59,6 +86,15 @@ PROJECTS = [
         ),
         tags=["7 test modules", "CI passing", "MIT"],
         live_url="https://profileproof-api-980932890834.us-east1.run.app",
+    ),
+    Project(
+        title="KinetiGuard",
+        repo="grasp-deep-learning-project",
+        description=(
+            "Uncertainty-calibrated active learning for 3D molecular force fields with "
+            "equivariant models, conformal bounds, and kinetic-landscape evaluation."
+        ),
+        tags=["NVIDIA L4 smoke report", "CI passing", "MIT"],
     ),
     Project(
         title="XRBridge",
@@ -78,46 +114,6 @@ PROJECTS = [
         ),
         tags=["Deterministic tests", "CI passing", "Live demo"],
         live_url="https://ritwijparmar.github.io/vyuh-x/",
-    ),
-    Project(
-        title="MotorGuard RTOS",
-        repo="MotorGuard-RTOS",
-        description=(
-            "Zephyr RTOS condition-monitoring firmware for ARM Cortex-M with an ADXL345 "
-            "SPI driver, fixed-point DSP, watchdogs, and fault injection."
-        ),
-        tags=["Native test suite", "CI passing", "MIT"],
-    ),
-    Project(
-        title="ManoVarta",
-        repo="ManoVarta",
-        description=(
-            "Controller-led multilingual mental-health GenAI system for English, Hindi, and "
-            "Hinglish PHQ-9/GAD-7 item-level assessment with evidence extraction and safety routing."
-        ),
-        tags=["25 test files", "Safety routing", "Live service"],
-        live_url="https://manovarta-runtime-ciiiagnzaq-uk.a.run.app",
-        demo_url="https://storage.googleapis.com/ritwij-demo-videos-2281c357/manovarta_final_demo.mp4",
-    ),
-    Project(
-        title="SRE-Nidaan",
-        repo="SRE-Nidaan",
-        description=(
-            "Incident response copilot using Next.js, FastAPI, vLLM, telemetry grounding, "
-            "runbook retrieval, remediation gating, and analyst feedback loops."
-        ),
-        tags=["4 test modules", "Telemetry grounding", "Live service"],
-        live_url="https://sre-nidaan-122722888597.us-east4.run.app",
-        demo_url="https://storage.googleapis.com/ritwij-demo-videos-2281c357/sre_nidaan_demo.mp4",
-    ),
-    Project(
-        title="TenantVault",
-        repo="tenantvault-zero-trust-rag",
-        description=(
-            "Multi-tenant RAG service using PostgreSQL row-level security and verifiable "
-            "isolation receipts to make tenant boundaries testable."
-        ),
-        tags=["Isolation tests", "CI passing", "PostgreSQL RLS"],
     ),
 ]
 
