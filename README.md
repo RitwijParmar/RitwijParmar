@@ -20,26 +20,30 @@ Backend and AI systems engineer focused on inference, evaluation, and reliabilit
 
 | Area | Merged contribution |
 | --- | --- |
-| LLM tooling | [Unsloth #7191](https://github.com/unslothai/unsloth/pull/7191) - added an opt-in MCP control plane with typed validation, audit records, and regression coverage. |
+| LLM evaluation | [Promptfoo #9460](https://github.com/promptfoo/promptfoo/pull/9460) - repaired grader reuse across provider references in a 951-line, 9-file change that went through 25 reviews. |
+| LLM tooling | [Unsloth #7191](https://github.com/unslothai/unsloth/pull/7191) - added an opt-in MCP control plane with typed validation, audit records, regression coverage, and 13 reviews. |
+| Inference runtime | [NVIDIA Dynamo #10095](https://github.com/ai-dynamo/dynamo/pull/10095) - unified Mooncake token-block hashing with Dynamo's shared KV-hashing contract across 10 files. |
 | Vector search | [Qdrant #9518](https://github.com/qdrant/qdrant/pull/9518) - fixed an int8 L2 quantization error and added metamorphic tests for translation invariance and score scaling. |
-| Inference runtime | [NVIDIA Dynamo #10095](https://github.com/ai-dynamo/dynamo/pull/10095) - unified Mooncake token-block hashing with Dynamo's shared KV-hashing contract and added validation coverage. |
-| LLM evaluation | [Promptfoo #9460](https://github.com/promptfoo/promptfoo/pull/9460) - repaired grader reuse across provider references while preserving suite environment overrides. |
-| Observability | [Arize Phoenix #13814](https://github.com/Arize-ai/phoenix/pull/13814) - exposed dataset-example source lineage across schema, resolver, client, and tests. |
-| Model deployment | [Baseten Truss #2474](https://github.com/basetenlabs/truss/pull/2474) - made weight preparation fail fast when metadata resolves to an empty file set. |
+| Live observability | [TraceRoot #1134](https://github.com/traceroot-ai/traceroot/pull/1134) - kept Git metadata and late spans visible in live traces through a 526-line reviewed fix. |
+| OpenAI instrumentation | [Pydantic Logfire #1981](https://github.com/pydantic/logfire/pull/1981) - added Responses API content-part support for text, images, and files across modern and legacy paths. |
+| Computer vision | [Roboflow Supervision #2282](https://github.com/roboflow/supervision/pull/2282) - corrected oriented-box IoU on non-square canvases and added regression coverage across five files. |
+| LLM framework | [Haystack #11412](https://github.com/deepset-ai/haystack/pull/11412) - fixed falsy metadata loss across 11 files with regression coverage and two maintainer reviews. |
+
+Also merged work in [Firecrawl](https://github.com/firecrawl/firecrawl/pull/3671), [Arize Phoenix](https://github.com/Arize-ai/phoenix/pull/13814), [FiftyOne](https://github.com/voxel51/fiftyone/pull/7824), [GreptimeDB](https://github.com/GreptimeTeam/greptimedb/pull/8341), [Daft](https://github.com/Eventual-Inc/Daft/pull/7061), and [Baseten Truss](https://github.com/basetenlabs/truss/pull/2474).
 
 ## Selected Systems
 
 <!-- START:DYNAMIC_PINNED -->
 | System | What it proves | Evidence |
 | --- | --- | --- |
+| **[SunoSentry](https://github.com/RitwijParmar/SunoSentry)**<br>[Code](https://github.com/RitwijParmar/SunoSentry) | Verifiable multi-agent voice-operations control plane with bounded MCP tools, explicit consent, safety gates, and auditable handoffs. | 2,048-case evaluation · 7 tests · CI on Python 3.11/3.12 |
 | **[TickYantra](https://github.com/RitwijParmar/TickYantra)**<br>[Code](https://github.com/RitwijParmar/TickYantra) | SLO-aware prefix-affinity control plane for SGLang inference with routing simulation and reproducible runtime analysis. | 4 core test modules · CI passing · v0.1.0 release |
+| **[TenantVault](https://github.com/RitwijParmar/tenantvault-zero-trust-rag)**<br>[Code](https://github.com/RitwijParmar/tenantvault-zero-trust-rag) | Multi-tenant RAG service using PostgreSQL row-level security, tenant-bound encryption, signed isolation receipts, and active breach tests. | Isolation tests · CI passing · PostgreSQL RLS |
+| **[LekhaSignal](https://github.com/RitwijParmar/LekhaSignal)**<br>[Code](https://github.com/RitwijParmar/LekhaSignal) | Snowflake revenue-reliability control plane with dbt, Airflow, data contracts, reconciliation, and bounded read-only MCP investigations. | 3 test modules · CI passing · Verified Snowflake run |
 | **[ProfileProof](https://github.com/RitwijParmar/ProfileProof)**<br>[Code](https://github.com/RitwijParmar/ProfileProof) · [Live](https://profileproof-api-980932890834.us-east1.run.app) | Consent-first profile normalization API with provider isolation, provenance, URL policy enforcement, and Cloud Run deployment. | 7 test modules · CI passing · MIT |
+| **[KinetiGuard](https://github.com/RitwijParmar/grasp-deep-learning-project)**<br>[Code](https://github.com/RitwijParmar/grasp-deep-learning-project) | Uncertainty-calibrated active learning for 3D molecular force fields with equivariant models, conformal bounds, and kinetic-landscape evaluation. | NVIDIA L4 smoke report · CI passing · MIT |
 | **[XRBridge](https://github.com/RitwijParmar/XRBridge)**<br>[Code](https://github.com/RitwijParmar/XRBridge) | C++20 pose bridge and Unity package for validated tracking, interpolation, coordinate transforms, and stable P/Invoke integration. | C++ test harness · CI passing · v0.1.0 release |
 | **[vyuh-x](https://github.com/RitwijParmar/vyuh-x)**<br>[Code](https://github.com/RitwijParmar/vyuh-x) · [Live](https://ritwijparmar.github.io/vyuh-x/) | Deterministic C++20 market-microstructure engine with execution simulation, latency-shadow replay, and explicit risk controls. | Deterministic tests · CI passing · Live demo |
-| **[MotorGuard RTOS](https://github.com/RitwijParmar/MotorGuard-RTOS)**<br>[Code](https://github.com/RitwijParmar/MotorGuard-RTOS) | Zephyr RTOS condition-monitoring firmware for ARM Cortex-M with an ADXL345 SPI driver, fixed-point DSP, watchdogs, and fault injection. | Native test suite · CI passing · MIT |
-| **[ManoVarta](https://github.com/RitwijParmar/ManoVarta)**<br>[Code](https://github.com/RitwijParmar/ManoVarta) · [Live](https://manovarta-runtime-ciiiagnzaq-uk.a.run.app) · [Demo](https://storage.googleapis.com/ritwij-demo-videos-2281c357/manovarta_final_demo.mp4) | Controller-led multilingual mental-health GenAI system for English, Hindi, and Hinglish PHQ-9/GAD-7 item-level assessment with evidence extraction and safety routing. | 25 test files · Safety routing · Live service |
-| **[SRE-Nidaan](https://github.com/RitwijParmar/SRE-Nidaan)**<br>[Code](https://github.com/RitwijParmar/SRE-Nidaan) · [Live](https://sre-nidaan-122722888597.us-east4.run.app) · [Demo](https://storage.googleapis.com/ritwij-demo-videos-2281c357/sre_nidaan_demo.mp4) | Incident response copilot using Next.js, FastAPI, vLLM, telemetry grounding, runbook retrieval, remediation gating, and analyst feedback loops. | 4 test modules · Telemetry grounding · Live service |
-| **[TenantVault](https://github.com/RitwijParmar/tenantvault-zero-trust-rag)**<br>[Code](https://github.com/RitwijParmar/tenantvault-zero-trust-rag) | Multi-tenant RAG service using PostgreSQL row-level security and verifiable isolation receipts to make tenant boundaries testable. | Isolation tests · CI passing · PostgreSQL RLS |
 <!-- END:DYNAMIC_PINNED -->
 
 ## Experience

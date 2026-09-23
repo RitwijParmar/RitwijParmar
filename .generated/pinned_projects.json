@@ -2,6 +2,21 @@
   "profile": "https://github.com/RitwijParmar",
   "projects": [
     {
+      "title": "SunoSentry",
+      "repo": "SunoSentry",
+      "description": "Verifiable multi-agent voice-operations control plane with bounded MCP tools, explicit consent, safety gates, and auditable handoffs.",
+      "tags": [
+        "2,048-case evaluation",
+        "7 tests",
+        "CI on Python 3.11/3.12"
+      ],
+      "live_url": null,
+      "demo_url": null,
+      "repo_url": "https://github.com/RitwijParmar/SunoSentry",
+      "language": "Python",
+      "stars": 0
+    },
+    {
       "title": "TickYantra",
       "repo": "TickYantra",
       "description": "SLO-aware prefix-affinity control plane for SGLang inference with routing simulation and reproducible runtime analysis.",
@@ -13,6 +28,36 @@
       "live_url": null,
       "demo_url": null,
       "repo_url": "https://github.com/RitwijParmar/TickYantra",
+      "language": "Python",
+      "stars": 0
+    },
+    {
+      "title": "TenantVault",
+      "repo": "tenantvault-zero-trust-rag",
+      "description": "Multi-tenant RAG service using PostgreSQL row-level security, tenant-bound encryption, signed isolation receipts, and active breach tests.",
+      "tags": [
+        "Isolation tests",
+        "CI passing",
+        "PostgreSQL RLS"
+      ],
+      "live_url": null,
+      "demo_url": null,
+      "repo_url": "https://github.com/RitwijParmar/tenantvault-zero-trust-rag",
+      "language": "Python",
+      "stars": 0
+    },
+    {
+      "title": "LekhaSignal",
+      "repo": "LekhaSignal",
+      "description": "Snowflake revenue-reliability control plane with dbt, Airflow, data contracts, reconciliation, and bounded read-only MCP investigations.",
+      "tags": [
+        "3 test modules",
+        "CI passing",
+        "Verified Snowflake run"
+      ],
+      "live_url": null,
+      "demo_url": null,
+      "repo_url": "https://github.com/RitwijParmar/LekhaSignal",
       "language": "Python",
       "stars": 0
     },
@@ -29,6 +74,21 @@
       "demo_url": null,
       "repo_url": "https://github.com/RitwijParmar/ProfileProof",
       "language": "Python",
+      "stars": 0
+    },
+    {
+      "title": "KinetiGuard",
+      "repo": "grasp-deep-learning-project",
+      "description": "Uncertainty-calibrated active learning for 3D molecular force fields with equivariant models, conformal bounds, and kinetic-landscape evaluation.",
+      "tags": [
+        "NVIDIA L4 smoke report",
+        "CI passing",
+        "MIT"
+      ],
+      "live_url": null,
+      "demo_url": null,
+      "repo_url": "https://github.com/RitwijParmar/grasp-deep-learning-project",
+      "language": "Jupyter Notebook",
       "stars": 0
     },
     {
@@ -59,66 +119,6 @@
       "demo_url": null,
       "repo_url": "https://github.com/RitwijParmar/vyuh-x",
       "language": "C++",
-      "stars": 0
-    },
-    {
-      "title": "MotorGuard RTOS",
-      "repo": "MotorGuard-RTOS",
-      "description": "Zephyr RTOS condition-monitoring firmware for ARM Cortex-M with an ADXL345 SPI driver, fixed-point DSP, watchdogs, and fault injection.",
-      "tags": [
-        "Native test suite",
-        "CI passing",
-        "MIT"
-      ],
-      "live_url": null,
-      "demo_url": null,
-      "repo_url": "https://github.com/RitwijParmar/MotorGuard-RTOS",
-      "language": "C++",
-      "stars": 0
-    },
-    {
-      "title": "ManoVarta",
-      "repo": "ManoVarta",
-      "description": "Controller-led multilingual mental-health GenAI system for English, Hindi, and Hinglish PHQ-9/GAD-7 item-level assessment with evidence extraction and safety routing.",
-      "tags": [
-        "25 test files",
-        "Safety routing",
-        "Live service"
-      ],
-      "live_url": "https://manovarta-runtime-ciiiagnzaq-uk.a.run.app",
-      "demo_url": "https://storage.googleapis.com/ritwij-demo-videos-2281c357/manovarta_final_demo.mp4",
-      "repo_url": "https://github.com/RitwijParmar/ManoVarta",
-      "language": "Python",
-      "stars": 1
-    },
-    {
-      "title": "SRE-Nidaan",
-      "repo": "SRE-Nidaan",
-      "description": "Incident response copilot using Next.js, FastAPI, vLLM, telemetry grounding, runbook retrieval, remediation gating, and analyst feedback loops.",
-      "tags": [
-        "4 test modules",
-        "Telemetry grounding",
-        "Live service"
-      ],
-      "live_url": "https://sre-nidaan-122722888597.us-east4.run.app",
-      "demo_url": "https://storage.googleapis.com/ritwij-demo-videos-2281c357/sre_nidaan_demo.mp4",
-      "repo_url": "https://github.com/RitwijParmar/SRE-Nidaan",
-      "language": "Python",
-      "stars": 0
-    },
-    {
-      "title": "TenantVault",
-      "repo": "tenantvault-zero-trust-rag",
-      "description": "Multi-tenant RAG service using PostgreSQL row-level security and verifiable isolation receipts to make tenant boundaries testable.",
-      "tags": [
-        "Isolation tests",
-        "CI passing",
-        "PostgreSQL RLS"
-      ],
-      "live_url": null,
-      "demo_url": null,
-      "repo_url": "https://github.com/RitwijParmar/tenantvault-zero-trust-rag",
-      "language": "Python",
       "stars": 0
     }
   ]
