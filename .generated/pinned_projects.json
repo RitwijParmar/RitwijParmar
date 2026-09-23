@@ -2,28 +2,13 @@
   "profile": "https://github.com/RitwijParmar",
   "projects": [
     {
-      "title": "HelixServe",
-      "repo": "HelixServe",
-      "description": "LLM serving runtime on GCP NVIDIA L4 with paged KV cache, continuous batching, prefix caching, CUDA Graph decode, and benchmark instrumentation.",
-      "tags": [
-        "Paged KV Cache",
-        "Continuous Batching",
-        "CUDA Graph Decode"
-      ],
-      "live_url": null,
-      "demo_url": "https://storage.googleapis.com/ritwij-demo-videos-2281c357/helixserve_linkedin_final.mp4",
-      "repo_url": "https://github.com/RitwijParmar/HelixServe",
-      "language": "Python",
-      "stars": 0
-    },
-    {
       "title": "TickYantra",
       "repo": "TickYantra",
-      "description": "SLO-aware prefix-affinity control plane for SGLang with routing simulation, load-aware scheduling, and reproducible runtime analysis.",
+      "description": "SLO-aware prefix-affinity control plane for SGLang inference with routing simulation and reproducible runtime analysis.",
       "tags": [
-        "Prefix Affinity",
-        "SLO Routing",
-        "SGLang"
+        "4 core test modules",
+        "CI passing",
+        "v0.1.0 release"
       ],
       "live_url": null,
       "demo_url": null,
@@ -32,28 +17,13 @@
       "stars": 0
     },
     {
-      "title": "ManoVarta",
-      "repo": "ManoVarta",
-      "description": "Controller-led multilingual mental-health GenAI system for English, Hindi, and Hinglish PHQ-9/GAD-7 item-level assessment with evidence extraction and safety routing.",
-      "tags": [
-        "Evidence Extraction",
-        "PHQ/GAD Scoring",
-        "Safety Routing"
-      ],
-      "live_url": "https://manovarta-runtime-ciiiagnzaq-uk.a.run.app",
-      "demo_url": "https://storage.googleapis.com/ritwij-demo-videos-2281c357/manovarta_final_demo.mp4",
-      "repo_url": "https://github.com/RitwijParmar/ManoVarta",
-      "language": "Python",
-      "stars": 1
-    },
-    {
       "title": "ProfileProof",
       "repo": "ProfileProof",
-      "description": "Consent-first professional profile normalization API with provider isolation, provenance tracking, Cloud Run deployment, and contract-tested outputs.",
+      "description": "Consent-first profile normalization API with provider isolation, provenance, URL policy enforcement, and Cloud Run deployment.",
       "tags": [
-        "Data Provenance",
-        "Provider Contracts",
-        "Cloud Run"
+        "7 test modules",
+        "CI passing",
+        "MIT"
       ],
       "live_url": "https://profileproof-api-980932890834.us-east1.run.app",
       "demo_url": null,
@@ -62,28 +32,13 @@
       "stars": 0
     },
     {
-      "title": "SRE-Nidaan",
-      "repo": "SRE-Nidaan",
-      "description": "Incident response copilot using Next.js, FastAPI, vLLM, telemetry grounding, runbook retrieval, remediation gating, and analyst feedback loops.",
-      "tags": [
-        "Telemetry Grounding",
-        "Remediation Gates",
-        "RLHF Pipeline"
-      ],
-      "live_url": "https://sre-nidaan-122722888597.us-east4.run.app",
-      "demo_url": "https://storage.googleapis.com/ritwij-demo-videos-2281c357/sre_nidaan_demo.mp4",
-      "repo_url": "https://github.com/RitwijParmar/SRE-Nidaan",
-      "language": "Python",
-      "stars": 0
-    },
-    {
       "title": "XRBridge",
       "repo": "XRBridge",
       "description": "C++20 pose bridge and Unity package for validated tracking, interpolation, coordinate transforms, and stable P/Invoke integration.",
       "tags": [
-        "C++20",
-        "Pose Interpolation",
-        "Unity P/Invoke"
+        "C++ test harness",
+        "CI passing",
+        "v0.1.0 release"
       ],
       "live_url": null,
       "demo_url": null,
@@ -94,11 +49,11 @@
     {
       "title": "vyuh-x",
       "repo": "vyuh-x",
-      "description": "Deterministic C++20 market microstructure engine with execution simulation, latency-shadow replay, risk controls, and reproducible event processing.",
+      "description": "Deterministic C++20 market-microstructure engine with execution simulation, latency-shadow replay, and explicit risk controls.",
       "tags": [
-        "Market Microstructure",
-        "Deterministic Replay",
-        "Risk Controls"
+        "Deterministic tests",
+        "CI passing",
+        "Live demo"
       ],
       "live_url": "https://ritwijparmar.github.io/vyuh-x/",
       "demo_url": null,
@@ -109,16 +64,61 @@
     {
       "title": "MotorGuard RTOS",
       "repo": "MotorGuard-RTOS",
-      "description": "Zephyr RTOS condition-monitoring firmware for ARM Cortex-M with an ADXL345 SPI driver, fixed-point DSP, watchdogs, and fault-injection tests.",
+      "description": "Zephyr RTOS condition-monitoring firmware for ARM Cortex-M with an ADXL345 SPI driver, fixed-point DSP, watchdogs, and fault injection.",
       "tags": [
-        "Zephyr RTOS",
-        "Fixed-point DSP",
-        "Fault Injection"
+        "Native test suite",
+        "CI passing",
+        "MIT"
       ],
       "live_url": null,
       "demo_url": null,
       "repo_url": "https://github.com/RitwijParmar/MotorGuard-RTOS",
       "language": "C++",
+      "stars": 0
+    },
+    {
+      "title": "ManoVarta",
+      "repo": "ManoVarta",
+      "description": "Controller-led multilingual mental-health GenAI system for English, Hindi, and Hinglish PHQ-9/GAD-7 item-level assessment with evidence extraction and safety routing.",
+      "tags": [
+        "25 test files",
+        "Safety routing",
+        "Live service"
+      ],
+      "live_url": "https://manovarta-runtime-ciiiagnzaq-uk.a.run.app",
+      "demo_url": "https://storage.googleapis.com/ritwij-demo-videos-2281c357/manovarta_final_demo.mp4",
+      "repo_url": "https://github.com/RitwijParmar/ManoVarta",
+      "language": "Python",
+      "stars": 1
+    },
+    {
+      "title": "SRE-Nidaan",
+      "repo": "SRE-Nidaan",
+      "description": "Incident response copilot using Next.js, FastAPI, vLLM, telemetry grounding, runbook retrieval, remediation gating, and analyst feedback loops.",
+      "tags": [
+        "4 test modules",
+        "Telemetry grounding",
+        "Live service"
+      ],
+      "live_url": "https://sre-nidaan-122722888597.us-east4.run.app",
+      "demo_url": "https://storage.googleapis.com/ritwij-demo-videos-2281c357/sre_nidaan_demo.mp4",
+      "repo_url": "https://github.com/RitwijParmar/SRE-Nidaan",
+      "language": "Python",
+      "stars": 0
+    },
+    {
+      "title": "TenantVault",
+      "repo": "tenantvault-zero-trust-rag",
+      "description": "Multi-tenant RAG service using PostgreSQL row-level security and verifiable isolation receipts to make tenant boundaries testable.",
+      "tags": [
+        "Isolation tests",
+        "CI passing",
+        "PostgreSQL RLS"
+      ],
+      "live_url": null,
+      "demo_url": null,
+      "repo_url": "https://github.com/RitwijParmar/tenantvault-zero-trust-rag",
+      "language": "Python",
       "stars": 0
     }
   ]

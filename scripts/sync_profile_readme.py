@@ -9,7 +9,6 @@ import os
 from dataclasses import asdict, dataclass
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
-from urllib.parse import quote
 
 import requests
 
@@ -43,55 +42,23 @@ class Project:
 
 PROJECTS = [
     Project(
-        title="HelixServe",
-        repo="HelixServe",
-        description=(
-            "LLM serving runtime on GCP NVIDIA L4 with paged KV cache, continuous batching, "
-            "prefix caching, CUDA Graph decode, and benchmark instrumentation."
-        ),
-        tags=["Paged KV Cache", "Continuous Batching", "CUDA Graph Decode"],
-        demo_url="https://storage.googleapis.com/ritwij-demo-videos-2281c357/helixserve_linkedin_final.mp4",
-    ),
-    Project(
         title="TickYantra",
         repo="TickYantra",
         description=(
-            "SLO-aware prefix-affinity control plane for SGLang with routing simulation, "
-            "load-aware scheduling, and reproducible runtime analysis."
+            "SLO-aware prefix-affinity control plane for SGLang inference with routing "
+            "simulation and reproducible runtime analysis."
         ),
-        tags=["Prefix Affinity", "SLO Routing", "SGLang"],
-    ),
-    Project(
-        title="ManoVarta",
-        repo="ManoVarta",
-        description=(
-            "Controller-led multilingual mental-health GenAI system for English, Hindi, and "
-            "Hinglish PHQ-9/GAD-7 item-level assessment with evidence extraction and safety routing."
-        ),
-        tags=["Evidence Extraction", "PHQ/GAD Scoring", "Safety Routing"],
-        live_url="https://manovarta-runtime-ciiiagnzaq-uk.a.run.app",
-        demo_url="https://storage.googleapis.com/ritwij-demo-videos-2281c357/manovarta_final_demo.mp4",
+        tags=["4 core test modules", "CI passing", "v0.1.0 release"],
     ),
     Project(
         title="ProfileProof",
         repo="ProfileProof",
         description=(
-            "Consent-first professional profile normalization API with provider isolation, "
-            "provenance tracking, Cloud Run deployment, and contract-tested outputs."
+            "Consent-first profile normalization API with provider isolation, provenance, "
+            "URL policy enforcement, and Cloud Run deployment."
         ),
-        tags=["Data Provenance", "Provider Contracts", "Cloud Run"],
+        tags=["7 test modules", "CI passing", "MIT"],
         live_url="https://profileproof-api-980932890834.us-east1.run.app",
-    ),
-    Project(
-        title="SRE-Nidaan",
-        repo="SRE-Nidaan",
-        description=(
-            "Incident response copilot using Next.js, FastAPI, vLLM, telemetry grounding, "
-            "runbook retrieval, remediation gating, and analyst feedback loops."
-        ),
-        tags=["Telemetry Grounding", "Remediation Gates", "RLHF Pipeline"],
-        live_url="https://sre-nidaan-122722888597.us-east4.run.app",
-        demo_url="https://storage.googleapis.com/ritwij-demo-videos-2281c357/sre_nidaan_demo.mp4",
     ),
     Project(
         title="XRBridge",
@@ -100,16 +67,16 @@ PROJECTS = [
             "C++20 pose bridge and Unity package for validated tracking, interpolation, "
             "coordinate transforms, and stable P/Invoke integration."
         ),
-        tags=["C++20", "Pose Interpolation", "Unity P/Invoke"],
+        tags=["C++ test harness", "CI passing", "v0.1.0 release"],
     ),
     Project(
         title="vyuh-x",
         repo="vyuh-x",
         description=(
-            "Deterministic C++20 market microstructure engine with execution simulation, "
-            "latency-shadow replay, risk controls, and reproducible event processing."
+            "Deterministic C++20 market-microstructure engine with execution simulation, "
+            "latency-shadow replay, and explicit risk controls."
         ),
-        tags=["Market Microstructure", "Deterministic Replay", "Risk Controls"],
+        tags=["Deterministic tests", "CI passing", "Live demo"],
         live_url="https://ritwijparmar.github.io/vyuh-x/",
     ),
     Project(
@@ -117,9 +84,40 @@ PROJECTS = [
         repo="MotorGuard-RTOS",
         description=(
             "Zephyr RTOS condition-monitoring firmware for ARM Cortex-M with an ADXL345 "
-            "SPI driver, fixed-point DSP, watchdogs, and fault-injection tests."
+            "SPI driver, fixed-point DSP, watchdogs, and fault injection."
         ),
-        tags=["Zephyr RTOS", "Fixed-point DSP", "Fault Injection"],
+        tags=["Native test suite", "CI passing", "MIT"],
+    ),
+    Project(
+        title="ManoVarta",
+        repo="ManoVarta",
+        description=(
+            "Controller-led multilingual mental-health GenAI system for English, Hindi, and "
+            "Hinglish PHQ-9/GAD-7 item-level assessment with evidence extraction and safety routing."
+        ),
+        tags=["25 test files", "Safety routing", "Live service"],
+        live_url="https://manovarta-runtime-ciiiagnzaq-uk.a.run.app",
+        demo_url="https://storage.googleapis.com/ritwij-demo-videos-2281c357/manovarta_final_demo.mp4",
+    ),
+    Project(
+        title="SRE-Nidaan",
+        repo="SRE-Nidaan",
+        description=(
+            "Incident response copilot using Next.js, FastAPI, vLLM, telemetry grounding, "
+            "runbook retrieval, remediation gating, and analyst feedback loops."
+        ),
+        tags=["4 test modules", "Telemetry grounding", "Live service"],
+        live_url="https://sre-nidaan-122722888597.us-east4.run.app",
+        demo_url="https://storage.googleapis.com/ritwij-demo-videos-2281c357/sre_nidaan_demo.mp4",
+    ),
+    Project(
+        title="TenantVault",
+        repo="tenantvault-zero-trust-rag",
+        description=(
+            "Multi-tenant RAG service using PostgreSQL row-level security and verifiable "
+            "isolation receipts to make tenant boundaries testable."
+        ),
+        tags=["Isolation tests", "CI passing", "PostgreSQL RLS"],
     ),
 ]
 
@@ -138,61 +136,27 @@ def get_repo_meta(repo: str) -> dict:
         return {}
 
 
-def badge(label: str, value: str, color: str, logo: str | None = None) -> str:
-    safe_label = quote(label.replace("-", "--"), safe="")
-    safe_value = quote(value.replace("-", "--"), safe="")
-    logo_part = f"&logo={quote(logo)}&logoColor=white" if logo else ""
-    return (
-        f'<img src="https://img.shields.io/badge/{safe_label}-{safe_value}-{color}'
-        f'?style=flat-square{logo_part}" alt="{html.escape(label)}: {html.escape(value)}"/>'
-    )
-
-
-def link_badge(label: str, url: str, color: str, logo: str | None = None) -> str:
-    return f'<a href="{html.escape(url)}">{badge(label, "Open", color, logo)}</a>'
-
-
-def render_card(project: Project, meta: dict) -> str:
-    language = meta.get("language") or "Code"
-    stars = meta.get("stargazers_count") or 0
-    metadata_badges = [badge("Language", language, "334155")]
-    if stars > 0:
-        metadata_badges.append(badge("Stars", str(stars), "334155", "github"))
-    tag_badges = " ".join(badge("Signal", tag, "0f766e") for tag in project.tags)
-    links = [
-        link_badge("GitHub", project.repo_url, "1e3a8a", "github"),
-    ]
+def project_links(project: Project) -> str:
+    links = [f"[Code]({project.repo_url})"]
     if project.live_url:
-        links.append(link_badge("Live", project.live_url, "047857"))
+        links.append(f"[Live]({project.live_url})")
     if project.demo_url:
-        links.append(link_badge("Demo", project.demo_url, "f97316"))
-
-    return "\n".join(
-        [
-            '<td width="50%" valign="top">',
-            f'<h3><a href="{project.repo_url}">{html.escape(project.title)}</a></h3>',
-            f"<sub>{html.escape(project.description)}</sub><br/><br/>",
-            f'{" ".join(metadata_badges)}<br/><br/>',
-            f"{tag_badges}<br/><br/>",
-            " ".join(links),
-            "</td>",
-        ]
-    )
+        links.append(f"[Demo]({project.demo_url})")
+    return " · ".join(links)
 
 
 def render_dynamic_section(projects: list[Project]) -> tuple[str, dict]:
     metadata = {project.repo: get_repo_meta(project.repo) for project in projects}
-    rows: list[str] = []
-    for offset in range(0, len(projects), 2):
-        chunk = projects[offset : offset + 2]
-        rows.extend(["<table>", "<tr>"])
-        for project in chunk:
-            rows.append(render_card(project, metadata.get(project.repo, {})))
-        if len(chunk) == 1:
-            rows.append('<td width="50%" valign="top"></td>')
-        rows.extend(["</tr>", "</table>"])
-        if offset + 2 < len(projects):
-            rows.append("")
+    rows = [
+        "| System | What it proves | Evidence |",
+        "| --- | --- | --- |",
+    ]
+    for project in projects:
+        title = f"**[{project.title}]({project.repo_url})**"
+        proof = " · ".join(project.tags)
+        rows.append(
+            f"| {title}<br>{project_links(project)} | {project.description} | {proof} |"
+        )
 
     data = {
         "profile": f"https://github.com/{PROFILE_USER}",
